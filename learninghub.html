@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learning Hub - Bright Ideas Dominica</title>
+
+  <link rel="stylesheet" href="learninghub.css" />
+  <link rel="stylesheet" href="preloader.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link rel="icon" href="images/icon.png" type="image/png">
+
+</head>
+
+<body>
+
+  <!-- HEADER SOCIALS -->
+  <header>
+    <a href="https://www.facebook.com/BrightIdeasDominica/" target="_blank" class="fa-brands fa-facebook"></a>
+    <a href="https://www.linkedin.com/in/brightideasdominica/?originalSubdomain=dm" target="_blank" class="fa-brands fa-linkedin"></a>
+    <a href="https://www.instagram.com/brightideasdominica/" class="fa-brands fa-instagram" target="_blank"></a>
+    <a href="https://www.tiktok.com/@bright.ideas767" class="fa-brands fa-tiktok" target="_blank"></a>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" class="dark-toggle" title="Toggle Dark Mode">☀️</button>
+  </header>
+
+
+  <!-- =================== NAVIGATION BAR =================== -->
+  <div class="header">
+    <div class="nav-left">
+      <a href="index.html" style="color: yellow;">HOME</a>
+      <a href="aboutpage.html">ABOUT</a>
+      <a href="servicespage.html">SERVICES</a>
+    </div>
+    
+    <div class="nav-right">
+      <div class="main-item"> 
+        <a href="learninghub.html">LEARNING HUB</a>
+      </div>      
+      <a href="gallerypage.html">GALLERY</a>
+      <a href="contactpage.html">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="learning-hero">
+    <h1>Welcome to the Learning Hub</h1>
+    <p>Your digital space for notes, guides, tutorials, and academic tools.</p>
+
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search resources...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </section>
+
+  <!-- CATEGORIES GRID -->
+ <section class="categories">
+
+  <a href="video.html" class="card-link" >
+    <div class="category-card" data-category="videos">
+      <i class="fa-solid fa-video icon"></i>  
+      <h3>Videos</h3>
+      <p>Watch tutorials and educational clips.</p>
+    </div>
+  </a>
+
+  <a href="tips.html" class="card-link">
+    <div class="category-card" data-category="tips">
+      <i class="fa-solid fa-lightbulb icon"></i>
+      <h3>Tips</h3>
+      <p>Quick advice to help improve your learning.</p>
+    </div>
+  </a>
+
+  <a href="notes.html" class="card-link">
+    <div class="category-card" data-category="notes">
+      <i class="fa-solid fa-book icon"></i>
+      <h3>Notes</h3>
+      <p>Downloadable notes and summaries.</p>
+    </div>
+  </a>
+
+  <a href="external.html" class="card-link">
+    <div class="category-card" data-category="external">
+      <i class="fa-solid fa-globe icon"></i>
+      <h3>External Sources</h3>
+      <p>Links to helpful online resources.</p>
+    </div>
+  </a>
+
+</section>
+
+
+  <!-- =================== FOOTER =================== -->
+  <footer>
+    <p>© 2025 Bright Ideas Dominica. All rights reserved.</p>
+  </footer>
+
+  <script src="learninghub.js" defer></script>
+  <script src="darkmode.js" defer></script>
+  <script src="preloader.js" defer></script>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="logo">
+    <div class="initials is-bouncing">B.I.E.C</div>
+    <div class="fullname">Bright Ideas<br>Education Consultancy</div>
+  </div>
+</div>
+
+</body>
+</html>

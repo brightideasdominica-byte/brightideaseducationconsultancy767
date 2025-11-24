@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta information -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta author="name" content="Nathanaelle Cesar">
+
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Page title -->
+  <title>Contact - Bright Ideas Dominica</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="contactpage.css">
+  <link rel="stylesheet" href="preloader.css">
+
+   <!-- Page title photo -->
+<link rel="icon" href="images/icon.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER: SOCIAL ICONS
+  ======================== -->
+  <header>
+ <a href="https://www.facebook.com/BrightIdeasDominica/" target="_blank" class="fa-brands fa-facebook"></a>
+    <a href="https://www.linkedin.com/in/brightideasdominica/?originalSubdomain=dm" target="_blank" class="fa-brands fa-linkedin"></a>
+    <a href="https://www.instagram.com/brightideasdominica/" class="fa-brands fa-instagram" target="_blank" ></a>
+    <a href="https://www.tiktok.com/@bright.ideas767" class="fa-brands fa-tiktok" target="_blank" ></a>
+
+     <!-- Dark mode toggle circle -->
+  <button id="darkModeToggle" class="dark-toggle" title="Toggle Dark Mode">☀️</button>
+  </header>
+
+  <!-- =========================
+       NAVIGATION BAR
+  ======================== -->
+  <div class="header">
+    <!-- Left navigation -->
+    <div class="nav-left">
+      <a href="index.html" style="color: yellow;">HOME</a>
+      <a href="aboutpage.html">ABOUT</a>
+      <a href="servicespage.html">SERVICES</a>
+    </div>
+    
+    <!-- Right navigation -->
+    <div class="nav-right">
+      <div class="main-item"> 
+        <a href="learninghub.html">LEARNING HUB</a>
+      </div>      
+      <a href="gallerypage.html">GALLERY</a>
+      <a href="contactpage.html">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- =========================
+       CONTACT FORM SECTION
+  ======================== -->
+  <div class="container">
+    <!-- Left Column: Form -->
+    <div class="left-column">
+      <div class="contact">
+        <h2>Contact Me</h2>
+        <form id="form" action="https://formspree.io/f/xeorrjbg" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <span class="error-message" id="name-error"></span>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error-message" id="email-error"></span>
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+          <span class="error-message" id="subject-error"></span>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <span class="error-message" id="message-error"></span>
+
+          <button type="submit" class="send-button">Submit</button>
+        </form>                    
+      </div>
+    </div>
+
+    <!-- Right Column: Contact Information -->
+    <div class="right-column">
+      <div class="content">
+        <h1>Get in Touch With Me</h1>
+        <p>Feel free to ask questions or send messages!</p>
+        <h2>Contact Information</h2>
+        <p>Email: brightideasdominica@gmail.com</p>
+        <p>Phone: +1 (767) 225-8072</p>
+        <p>Location: 67 Kennedy Avenue, Roseau, Dominica</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error display -->
+  <div id="error" style="color: red;" aria-live="polite"></div>
+
+
+
+  <!-- =========================
+       FAQ SECTION
+  ======================== -->
+  <section>
+    <h2 class="title">FAQs</h2>
+
+    <div class="faq">
+      <div class="question">
+        <h3>Where are you located?</h3>
+        <svg width="15" height="10" viewBox="0 0 42 25"> 
+          <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/> 
+        </svg>
+      </div>    
+      <div class="answer">
+        <p>67 Kennedy Ave, Roseau, Dominica</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <h3>How much is the course?</h3>
+        <svg width="15" height="10" viewBox="0 0 42 25"> 
+          <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/> 
+        </svg>
+      </div>    
+      <div class="answer">
+        <p>Student programmed cost EC$150.00</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <h3>What are the times of your programmes?</h3>
+        <svg width="15" height="10" viewBox="0 0 42 25"> 
+          <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/> 
+        </svg>
+      </div>    
+      <div class="answer">
+        <p>
+          <b>Special  Needs:</b><br> Mon-Fri 8:00 am -1:00 pm <br>
+         <b>(1) Literacy Programme:</b>  <br>
+          Mon- Fri 2:00-4:00 pm <br>
+          <b>(2) Literacy Programme: </b> <br>
+           Mon- Fri 4:00-6:00 pm <br>
+          <b>English Learning for Adults:</b><br>
+          Saturdays-10:00am -12:00 pm 
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <h3>What services do you provide? </h3>
+        <svg width="15" height="10" viewBox="0 0 42 25"> 
+          <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/> 
+        </svg>
+      </div>    
+      <div class="answer">
+        <p>
+          1.	Literacy programmes for school age students <br>
+          2.	English classes for English Learners (children and adults) <br>
+          3.	Literacy consultancy for educational institutions  <br>
+          4.	Full-day programme for special needs students unable to attend high school
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <h3> What training do you have? </h3>
+        <svg width="15" height="10" viewBox="0 0 42 25"> 
+          <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/> 
+        </svg>
+      </div>    
+      <div class="answer">
+        <p>I hold a Master of Education in Reading.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <h3> Can students start anytime in the term? </h3>
+        <svg width="15" height="10" viewBox="0 0 42 25"> 
+          <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/> 
+        </svg>
+      </div>    
+      <div class="answer">
+        <p>Yes. Since students are assessed and monitored individually, they can start at anytime. </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <h3> Do you offer private tutoring? </h3>
+        <svg width="15" height="10" viewBox="0 0 42 25"> 
+          <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/> 
+        </svg>
+      </div>    
+      <div class="answer">
+        <p>Not during the regular programme time. However, students have 
+          individual targets and are monitored and taught based on their individual needs. </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       GOOGLE MAP
+  ======================== -->
+  <div class="container-map">
+    <h1>Find Us Here</h1>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.3975187032993!2d-61.3889950258534!3d15.30061715955741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c14d597413b7b47%3A0x583e8834f7fc8be1!2s67%20Kennedy%20Ave%2C%20Roseau!5e0!3m2!1sen!2sdm!4v1758005289612!5m2!1sen!2sdm" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- =================== FOOTER =================== -->
+  <footer>
+    <p>© 2025 Bright Ideas Dominica. All rights reserved.</p>
+  </footer>
+
+  
+  <div class="up">
+    <a href="#main"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
+
+  <!-- External JS -->
+  <script src="darkmode.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="preloader.js" defer></script>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="logo">
+    <div class="initials is-bouncing">B.I.E.C</div>
+    <div class="fullname">Bright Ideas<br>Education Consultancy</div>
+  </div>
+</div>
+
+
+</body>
+</html>

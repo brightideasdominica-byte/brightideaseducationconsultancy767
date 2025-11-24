@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Videos - Learning Hub</title>
+
+  <link rel="stylesheet" href="learninghub.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" href="images/icon.png" type="image/png">
+
+  <style>
+    /* -------------------------
+       Video Tabs Styles
+    ------------------------- */
+    .video-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tab-button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #eee;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-button.active {
+      background-color: #7c9758;
+      color: white;
+    }
+
+    .tab-button:hover {
+      background-color: #d4e0c0;
+    }
+
+    .video-content {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+
+    .video-content.active {
+      display: block !important;
+    }
+
+    .video-content video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    .video-content p {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      color: #3b594b;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    body.dark-mode .video-content p {
+      color: #f0c933;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 60px;
+      color: #3b594b;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1 + p {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: #3b594b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f8f8f8;
+      font-size: 13px;
+      color: #666;
+      margin-top: auto;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* -------------------------
+       Scroll to Top Button
+    ------------------------- */
+
+    .up {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #68b0b0;
+      color: black;
+      font-size: 16px;
+      cursor: pointer;
+
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .up.show-up-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .up:hover {
+      transform: translateY(-10%);
+      transition: 0.2s;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="https://www.facebook.com/BrightIdeasDominica/" target="_blank" class="fa-brands fa-facebook"></a>
+    <a href="https://www.linkedin.com/in/brightideasdominica/?originalSubdomain=dm" target="_blank" class="fa-brands fa-linkedin"></a>
+    <a href="https://www.instagram.com/brightideasdominica/" class="fa-brands fa-instagram" target="_blank" ></a>
+    <a href="https://www.tiktok.com/@bright.ideas767" class="fa-brands fa-tiktok" target="_blank" ></a>
+
+    <button id="darkModeToggle" class="dark-toggle" title="Toggle Dark Mode">☀️</button>
+  </header>
+
+  <!-- NAVIGATION -->
+  <div class="header">
+    <div class="nav-left">
+      <a href="index.html">HOME</a>
+      <a href="aboutpage.html">ABOUT</a>
+      <a href="servicespage.html">SERVICES</a>
+    </div>
+    <div class="nav-right">
+      <a href="learninghub.html">LEARNING HUB</a>
+      <a href="gallerypage.html">GALLERY</a>
+      <a href="contactpage.html">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <section class="content-section">
+    <h1>Learning Hub Videos</h1>
+    <p>Your digital space for tutorials and academic resources.</p>
+
+    <div class="video-tabs">
+      <button class="tab-button active" data-video="video1">Introduction</button>
+      <button class="tab-button" data-video="video2">Activities</button>
+      <button class="tab-button" data-video="video3">Advanced</button>
+    </div>
+
+    <div class="video-content active" id="video1">
+      <p>Introduction to Phonemic Awareness</p>
+      <video controls>
+        <source src="videos/Introduction to Phonemic Awareness.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-content" id="video2">
+      <p>Phonemic Awareness Activities</p>
+      <video controls>
+        <source src="videos/Activities.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-content" id="video3">
+      <p>Advanced Phonemic Awareness</p>
+      <video controls>
+        <source src="videos/Advanced.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <div class="up">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bright Ideas Dominica. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // ====================== Video Tabs ======================
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const videoContents = document.querySelectorAll('.video-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.video;
+
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        videoContents.forEach(video => {
+          const vidTag = video.querySelector('video');
+
+          if (video.id === target) {
+            video.classList.add('active');
+            if (vidTag) vidTag.play();
+          } else {
+            video.classList.remove('active');
+            if (vidTag) {
+              vidTag.pause();
+              vidTag.currentTime = 0;
+            }
+          }
+        });
+      });
+    });
+
+    // ====================== Scroll to Top Button ======================
+    const upBtn = document.querySelector('.up');
+
+    function toggleUpBtn() {
+      if (window.scrollY > 200) {
+        upBtn.classList.add('show-up-btn');
+      } else {
+        upBtn.classList.remove('show-up-btn');
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+    window.addEventListener('scroll', toggleUpBtn);
+    upBtn.addEventListener('click', scrollToTop);
+
+  </script>
+  <script src="darkmode.js" defer></script>
+
+</body>
+</html>

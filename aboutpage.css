@@ -1,0 +1,592 @@
+/* =========================
+ GLOBAL STYLES
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: #444;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* =========================
+ FIRST HEADER: SOCIAL ICONS & DARK MODE
+========================= */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  background-color: #7c9758;
+  color: black;
+  padding: 10px 20px;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+header .social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .fa-brands {
+  font-size: 25px;
+  color: rgb(247, 207, 5);
+  padding: 10px;
+  margin: 0 2px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+header .fa-brands:hover { opacity: 0.8; }
+header .fa-brands:active { opacity: 0.5; }
+
+/* Dark Mode Toggle Button */
+header .dark-toggle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(247, 207, 5);
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 
+    background-color 0.5s ease, 
+    color 0.5s ease, 
+    transform 0.2s ease,
+    box-shadow 0.5s ease;
+}
+
+header .dark-toggle:hover {
+  transform: scale(1.1);
+  background-color: #f2d44d;
+}
+
+body.dark-mode header .dark-toggle {
+  background-color: #444;
+  color: #f0c933;
+  box-shadow: 0 0 12px 3px #f0c933;
+}
+
+/* =========================
+ SECOND HEADER: NAVIGATION
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a8bf8a;
+  padding: 10px 20px;
+  transition: background-color 0.5s ease;
+}
+
+.nav-left, 
+.nav-right { 
+  display: flex; 
+  gap: 20px; 
+}
+
+.header a {
+  color: #3b594b;
+  text-decoration: none;
+  font-size: 13.5px;
+  line-height: 25px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: color 0.5s ease;
+}
+
+.header a:hover {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  opacity: 0.8;
+}
+
+/* Main item container */
+.main-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2d2d2d;
+}
+
+h1 { 
+  font-size: 2.4rem; 
+}
+h2 { 
+  font-size: 1.8rem; 
+}
+h3 { 
+  font-size: 1.2rem; 
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  margin: 20px 10%;
+  background: white;
+}
+
+.hero h1 {
+  margin-bottom: 16px;
+  color: #3b594b;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #555;
+}
+
+/* =========================
+   WHAT I DO SECTION
+========================= */
+.what-i-do {
+  text-align: center;
+  padding: 60px 10%;
+  background: #f8f9fc;
+  border-radius: 14px;
+}
+
+.what-i-do h2 {
+  margin-bottom: 24px;
+  color: #6b6fbf; 
+}
+
+/* Card container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Individual card */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card i {
+  font-size: 28px;
+  color: #a46ea9;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.card p {
+  font-size: 13.5px;
+  color: #555;
+}
+
+/* =========================
+   INFO HIGHLIGHTS
+========================= */
+.info-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 40px 10%;
+  background-color: #fef7f2; 
+  flex-wrap: wrap;
+  border-radius: 14px;
+}
+
+.info-card {
+  background: #ffffff;
+  flex: 1 1 200px;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.info-card i {
+  font-size: 26px;
+  color: #7c9758;
+  margin-bottom: 10px;
+}
+
+.info-card h3 {
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 13.5px;
+  color: #555;
+}
+
+/* =========================
+   HIGHLIGHT BOX (LET’S CONNECT)
+========================= */
+.highlight-box {
+  background: #fdf5f9;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 650px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.highlight-box h2 {
+  margin-bottom: 12px;
+  color: #a46ea9;
+}
+
+.highlight-box p {
+  margin-bottom: 18px;
+  color: #555;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #a46ea9;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #a46ea9;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #a46ea9;
+  color: #fff;
+}
+
+/*Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+.up a {
+  background-color: #68b0b0;
+  color: black;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.up a:hover {
+  transform: translateY(-10%);
+  transition: 0.2s;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background: #f8f8f8;
+  font-size: 13px;
+  color: #666;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+  .nav-left, .nav-right {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* =========================
+ DARK MODE STYLES
+========================= */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .header { 
+  background-color: #3b594b; 
+}
+body.dark-mode header { 
+  background-color: #10241b; 
+}
+
+body.dark-mode .nav-left a,
+body.dark-mode .nav-right a,
+body.dark-mode .coming-soon { 
+  color: #f0c933; 
+}
+
+body.dark-mode .about-section {
+  background-color: #121212;
+}
+
+body.dark-mode footer {
+  background-color: #000;
+  color: #7c9758;
+}
+
+body.dark-mode .what-i-do{
+  background-color: #181818;
+}
+
+body.dark-mode .what-i-do h2 {
+  color: #7c9758;
+}
+
+body.dark-mode .card{
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .card i{
+  color:#7c9758;
+}
+
+body.dark-mode .card h3, 
+body.dark-mode .card p {
+  color:white;
+}
+
+body.dark-mode .info-cards {
+  background-color: #000;
+}
+
+body.dark-mode .info-card{
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .info-card i{
+  color:#a46ea9;
+}
+
+body.dark-mode .info-card h3, 
+body.dark-mode .info-card p {
+  color:white;
+}
+
+body.dark-mode .highlight-box {
+  background-color: #000;
+}
+
+body.dark-mode .hero{
+  background-color: #121212;
+}
+
+body.dark-mode .hero h3, 
+body.dark-mode .hero p {
+  color:white;
+}
+
+
+body.dark-mode .highlight-box p {
+  color:white;
+}
+
+/* =========================
+   UNIVERSAL RESPONSIVE DESIGN
+   (For tablets & phones)
+========================= */
+
+/* Tablets and medium screens (≤992px) */
+@media screen and (max-width: 992px) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-left, 
+  .nav-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 50px 8%;
+    margin: 20px 5%;
+  }
+
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 15px; }
+
+  .card-container,
+  .info-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .card,
+  .info-card {
+    width: 280px;
+  }
+
+  .highlight-box {
+    margin: 50px auto;
+    padding: 35px;
+  }
+}
+
+/* Small tablets and large phones (≤768px) */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-left, 
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero {
+    padding: 40px 6%;
+    text-align: center;
+  }
+
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 14px; }
+
+  .what-i-do,
+  .info-cards,
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight-box {
+    padding: 25px;
+    margin: 40px 6%;
+  }
+
+  footer {
+    font-size: 12.5px;
+  }
+}
+
+/* Phones (≤480px) */
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .nav-left, 
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .hero {
+    padding: 30px 5%;
+    margin: 10px 4%;
+  }
+
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: 13.5px; }
+
+  .card,
+  .info-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .highlight-box {
+    padding: 20px;
+    margin: 30px 5%;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

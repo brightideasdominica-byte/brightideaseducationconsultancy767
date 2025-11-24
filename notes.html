@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notes - Learning Hub</title>
+
+  <link rel="stylesheet" href="learninghub.css">
+    <link rel="stylesheet" href="preloader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" href="images/icon.png" type="image/png">
+
+  <style>
+    h1 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 60px;
+      color: #3b594b;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1 + p {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 16px;
+      color: #3b594b;
+    }
+
+    .notes-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+    }
+
+    .note-card {
+      background: #fdfdfd;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .note-card i {
+      font-size: 40px;
+      color: #7c9758;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .note-card h3 {
+      margin-bottom: 10px;
+      color: #3b594b;
+      font-size: 18px;
+    }
+
+    .note-card p {
+      color: black;
+      font-size: 14px;
+    }
+
+    .note-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      background: #fdf6d9;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .note-card:hover i {
+      color: #f0c933;
+    }
+
+    body.dark-mode .note-card {
+      background: #1f1f1f;
+      color: #ddd;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    body.dark-mode .note-card:hover {
+      background: #333;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+
+    body.dark-mode .note-card i {
+      color: #f0c933;
+    }
+
+     body.dark-mode .note-card p {
+      color: whitesmoke;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f8f8f8;
+      font-size: 13px;
+      color: #666;
+      margin-top: auto;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+   <a href="https://www.facebook.com/BrightIdeasDominica/" target="_blank" class="fa-brands fa-facebook"></a>
+    <a href="https://www.linkedin.com/in/brightideasdominica/?originalSubdomain=dm" target="_blank" class="fa-brands fa-linkedin"></a>
+    <a href="https://www.instagram.com/brightideasdominica/" class="fa-brands fa-instagram" target="_blank" ></a>
+    <a href="https://www.tiktok.com/@bright.ideas767" class="fa-brands fa-tiktok" target="_blank" ></a>
+
+    <button id="darkModeToggle" class="dark-toggle" title="Toggle Dark Mode">☀️</button>
+  </header>
+
+  <!-- NAVIGATION -->
+  <div class="header">
+    <div class="nav-left">
+      <a href="index.html">HOME</a>
+      <a href="aboutpage.html">ABOUT</a>
+      <a href="servicespage.html">SERVICES</a>
+    </div>
+    <div class="nav-right">
+      <a href="learninghub.html">LEARNING HUB</a>
+      <a href="gallerypage.html">GALLERY</a>
+      <a href="contactpage.html">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- NOTES SECTION -->
+  <section class="content-section">
+    <h1>Downloadable Notes</h1>
+    <p>Quick summaries and study materials</p>
+
+    <div class="notes-cards">
+      <a href="notes1.pdf" target="_blank" class="note-card">
+        <i class="fa-solid fa-file-lines"></i>
+        <h3>Phonemic Awareness Notes</h3>
+        <p>Summary of key concepts in phonemic awareness.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bright Ideas Dominica. All rights reserved.</p>
+  </footer>
+
+<script src="darkmode.js" defer></script>
+<script src="preloader.js" defer></script>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="logo">
+    <div class="initials is-bouncing">B.I.E.C</div>
+    <div class="fullname">Bright Ideas<br>Education Consultancy</div>
+  </div>
+</div>
+
+
+</body>
+</html>
