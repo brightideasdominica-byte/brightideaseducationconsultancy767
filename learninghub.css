@@ -132,7 +132,7 @@ body.dark-mode header .dark-toggle {
    HERO + SEARCH BAR
 ========================= */
 .main-content {
-  flex: 1; /* ensures it grows and pushes footer down */
+  flex: 1; 
 }
 
 .learning-hero {
@@ -144,7 +144,6 @@ body.dark-mode header .dark-toggle {
   font-size: 35px;
   color: #3b594b;
   font-family: 'Playfair Display', serif;
-
 }
 
 .learning-hero p {
@@ -187,11 +186,10 @@ body.dark-mode header .dark-toggle {
 ========================= */
 .categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 1000px;
-  margin: 0 auto;
-  margin-top: -40px;
+  margin: -40px auto 40px;
 }
 
 .category-card {
@@ -205,7 +203,8 @@ body.dark-mode header .dark-toggle {
 }
 
 .category-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
   background: #fdf6d9;
 }
 
@@ -224,6 +223,27 @@ body.dark-mode header .dark-toggle {
   color: #fdfdfd;
 }
 
+.card-link {
+  text-decoration: none; 
+  color: inherit;        
+  display: block;        
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .categories {
+    grid-template-columns: 1fr; /* stacked cards on small screens */
+    gap: 15px;
+  }
+
+  .category-card {
+    padding: 20px;
+  }
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -233,7 +253,7 @@ footer {
   background: #f8f8f8;
   font-size: 13px;
   color: #666;
-  margin-top: 131px;
+  margin-top: 50px;
 }
 
 /* =========================
@@ -246,16 +266,15 @@ body.dark-mode {
 
 body.dark-mode .header { 
   background-color: #3b594b;
- }
+}
 body.dark-mode header { 
   background-color: #10241b; 
 }
 
 body.dark-mode .nav-left a,
 body.dark-mode .nav-right a{
-color: #f0c933; 
-}  
-
+  color: #f0c933; 
+}
 
 body.dark-mode .category-card {
   background: #1f1f1f;
@@ -281,38 +300,78 @@ body.dark-mode .search-box input:focus {
   box-shadow: 0 0 10px rgba(240, 201, 51, 0.6);
 }
 
-body.dark-mode .content-section h2 {
-  color: #f0c933;
-}
-
-body.dark-mode .content-section a {
-  color: #f0c933;
-}
-
 body.dark-mode footer {
   background: #000;
   color: #7c9758;
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ========================= */
-@media (max-width: 600px) {
-  .search-box {
-    width: 90%;
+@media screen and (max-width: 992px) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-left, 
+  .nav-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header { flex-direction: column; gap: 10px; }
+  .header { flex-direction: column; align-items: center; gap: 10px; }
+  .nav-left, .nav-right { flex-direction: column; align-items: center; gap: 8px; }
+
+  .learning-hero {
+    padding: 40px 6%;
+    text-align: center;
+  }
+
+  .learning-hero h1 { font-size: 28px; }
+  .learning-hero p { font-size: 14px; }
+
   .categories {
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 
   .category-card {
+    width: 90%;
+    max-width: 320px;
     padding: 20px;
   }
 }
-.card-link {
-  text-decoration: none; 
-  color: inherit;        
-  display: block;        
-}
 
+@media screen and (max-width: 480px) {
+  header { flex-direction: column; align-items: center; gap: 6px; padding: 8px 10px; }
+  .header { flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+  .nav-left, .nav-right { flex-direction: column; align-items: center; gap: 5px; }
+
+  .learning-hero {
+    padding: 30px 5%;
+  }
+
+  .learning-hero h1 { font-size: 24px; }
+  .learning-hero p { font-size: 13px; }
+
+  .category-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .icon { font-size: 30px; }
+}
