@@ -194,7 +194,7 @@ body.dark-mode header .dark-toggle {
 
 .category-card {
   background: #ffffff;
-  padding: 35px;
+  padding: 20px;
   border-radius: 15px;
   text-align: center;
   cursor: pointer;
@@ -375,6 +375,7 @@ body.dark-mode footer {
 
   .icon { font-size: 30px; }
 }
+
 
 
 
