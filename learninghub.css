@@ -189,6 +189,7 @@ body.dark-mode header .dark-toggle {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 1000px;
+  height: 100px
   margin: -40px auto 40px;
 }
 
@@ -375,4 +376,5 @@ body.dark-mode footer {
 
   .icon { font-size: 30px; }
 }
+
 
