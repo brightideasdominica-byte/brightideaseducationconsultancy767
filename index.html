@@ -1,168 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =================== META & RESPONSIVE SETTINGS =================== -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Bright Ideas Education Consultancy</title>
-  <meta name="description" content="Bright Ideas Education Consultancy - literacy, tutoring, and learning support in Dominica.">
-  <meta name="theme-color" content="#016fb9">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Basic SEO / social preview -->
-  <meta property="og:title" content="Bright Ideas Education Consultancy">
-  <meta property="og:description" content="Empowering learners of all ages with strong foundations in reading, writing and communication.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://brightideasdominica-byte.github.io/brightideaseducationconsultancy767/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1200&q=60">
+  <!-- Author information -->
+  <meta author="name" content="Nathanaelle Cesar">
 
-  <!-- Fallback favicon -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230167b8'/%3E%3Ctext x='50' y='55' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3EB%3C/text%3E%3C/svg%3E">
+  <!-- =================== EXTERNAL RESOURCES =================== -->
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-  <style>
-    :root{--blue:#016fb9;--muted:#667085;--card:#ffffff;--bg:#f6f8fb;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:#0f1724;line-height:1.5}
-    .container{max-width:1024px;margin:0 auto;padding:24px}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
 
-    header{background:linear-gradient(90deg,var(--blue),#0a86ff);color:white;padding:18px 0;border-bottom:4px solid rgba(255,255,255,0.08)}
-    .nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:12px;align-items:center;font-weight:700}
-    .brand .logo{width:46px;height:46px;border-radius:8px;background:white;color:var(--blue);display:grid;place-items:center;font-weight:800}
-    nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px;border-radius:8px}
-    nav a:hover{background:rgba(255,255,255,0.06)}
+  <!-- Page title -->
+  <title>Home - Bright Ideas Dominica</title>
 
-    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:36px 0}
-    .hero h1{margin:0;font-size:clamp(28px,4vw,44px)}
-    .hero p{margin:8px 0 0;color:var(--muted)}
-    .cta-row{margin-top:12px;display:flex;gap:12px}
-    .btn{background:white;color:var(--blue);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
-    .btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.2);color:white}
+  <!-- Page title photo -->
+<link rel="icon" href="icon.png" type="image/png">
 
-    main{padding:18px 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,30,0.06)}
-    .muted{color:var(--muted);font-size:0.95rem}
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="preloader.css">
 
-    .services li{margin-bottom:10px}
-    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8}
-    .contact-form button{margin-top:8px;background:var(--blue);color:white;padding:10px 14px;border-radius:8px;border:0}
-
-    footer{padding:24px 0;color:var(--muted);font-size:0.95rem}
-
-    @media(min-width:768px){.hero{grid-template-columns:1fr 360px}}
-  </style>
 </head>
+
 <body>
+  <!-- =================== HEADER: SOCIAL MEDIA =================== -->
   <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">B</div>
-        <div>
-          <div style="font-size:14px;opacity:0.95">Bright Ideas</div>
-          <div style="font-size:12px;opacity:0.9">Education Consultancy</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#hub">Learning Hub</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <!-- Social media icons (links open in new tab) -->
+    <a href="https://www.facebook.com/BrightIdeasDominica/" target="_blank" class="fa-brands fa-facebook"></a>
+    <a href="https://www.linkedin.com/in/brightideasdominica/?originalSubdomain=dm" target="_blank" class="fa-brands fa-linkedin"></a>
+    <a href="https://www.instagram.com/brightideasdominica/" class="fa-brands fa-instagram" target="_blank" ></a>
+    <a href="https://www.tiktok.com/@bright.ideas767" class="fa-brands fa-tiktok" target="_blank" ></a>
+
+    <!-- Dark mode toggle circle -->
+  <button id="darkModeToggle" class="dark-toggle" title="Toggle Dark Mode">🌙</button>
   </header>
 
-  <section id="home" class="container hero">
-    <div>
-      <h1>Bright Ideas<br>Education Consultancy</h1>
-      <p class="muted">We empower learners of all ages by building strong foundations in reading, writing, and communication — so they can thrive with confidence.</p>
-      <div class="cta-row">
-        <a class="btn" href="#contact">Book a free consult</a>
-        <a class="btn alt" href="#services">Our services</a>
-      </div>
-
-      <div style="margin-top:22px;display:flex;gap:10px;align-items:center">
-        <div class="card" style="padding:12px;border-radius:10px;display:inline-block">B.I.E.C — Bright Ideas Education Consultancy</div>
-        <div class="muted">Serving Dominica — tailored literacy support & assessments</div>
-      </div>
+  <!-- =================== NAVIGATION BAR =================== -->
+  <div class="header">
+    <!-- Left navigation: main pages -->
+    <div class="nav-left">
+      <a href="index.html" style="color: yellow;">HOME</a>
+      <a href="aboutpage.html">ABOUT</a>
+      <a href="servicespage.html">SERVICES</a>
     </div>
 
-    <aside class="card">
-      <h3 style="margin-top:0">Quick facts</h3>
-      <ul class="muted">
-        <li>Qualified tutors and literacy specialists</li>
-        <li>One-to-one and small group programs</li>
-        <li>Online & in-person options</li>
-      </ul>
-      <p style="margin-top:12px"><strong>Hours:</strong> Mon–Fri 9am–5pm</p>
-      <p style="margin:0.5rem 0"><a href="#contact" class="btn">Contact us</a></p>
-    </aside>
+    <!-- Right navigation: extra pages -->
+    <div class="nav-right">
+      <div class="main-item"> 
+        <a href="learninghub.html">LEARNING HUB</a>
+      </div>      
+
+      <a href="gallerypage.html">GALLERY</a>
+      <a href="contactpage.html">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- =================== HERO SECTION =================== -->
+  <section class="hero">
+    <!-- Founder image -->
+    <div class="hero-image">
+      <img src="Founder of BID.png" alt="Image of Founder">
+    </div>
+
+    <!-- Hero text content -->
+    <div class="hero-text">
+      <!-- Animated greeting -->
+      <h2>Welcome!</h2> 
+
+      <!-- Main title -->
+      <h1>Bright Ideas <br> Education Consultancy</h1>
+      
+      <!-- Tagline -->
+      <span class="tagline">Your Success is Our Business</span>
+
+      <!-- Introduction paragraph -->
+      <p>
+        Bright Ideas Education Consultancy empowers learners <br> 
+        of all ages and abilities by creating strong foundations in reading, <br> 
+        writing, and communication. We believe that literacy is the key to <br> 
+        unlocking confidence, creativity, and opportunity.
+      </p>
+
+      <!-- Call-to-action button -->
+      <button class="about-me-button" onclick="location.href='aboutpage.html'">
+        Learn More &rarr;
+      </button>
+    </div>
   </section>
 
-  <main class="container">
-    <section id="about" class="card" style="margin-bottom:16px">
-      <h2>About</h2>
-      <p class="muted">Bright Ideas Education Consultancy empowers learners of all ages and abilities by creating strong foundations in literacy and communication. We focus on evidence-based strategies and personalized learning plans to unlock each student's potential.</p>
-    </section>
 
-    <section id="services" class="card" style="margin-bottom:16px">
-      <h2>Services</h2>
-      <div class="grid">
-        <div>
-          <h3>Assessments</h3>
-          <p class="muted">Comprehensive literacy and learning needs assessments to design a targeted plan.</p>
-        </div>
-        <div>
-          <h3>Tutoring</h3>
-          <p class="muted">One-to-one tutoring for reading, writing, exam prep and confidence building.</p>
-        </div>
-        <div>
-          <h3>Workshops</h3>
-          <p class="muted">Teacher training and parent workshops to support learning at school and home.</p>
-        </div>
-        <div>
-          <h3>Learning Hub</h3>
-          <p class="muted">Curated resources, worksheets and online lessons for ongoing practice.</p>
-        </div>
-      </div>
-    </section>
 
-    <section id="hub" class="card" style="margin-bottom:16px">
-      <h2>Learning Hub</h2>
-      <p class="muted">Coming soon: a dedicated section with free printable resources and short lessons. If you already have materials, consider linking them here.</p>
-    </section>
+    <!-- External JS -->
+    <script src="darkmode.js" defer></script>
+    <script src="preloader.js" defer></script>
 
-    <section id="gallery" class="card" style="margin-bottom:16px">
-      <h2>Gallery</h2>
-      <div class="grid">
-        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=60" alt="students reading" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
-        <img src="https://images.unsplash.com/photo-1584697964154-2b7c3b3b2ed7?auto=format&fit=crop&w=600&q=60" alt="classroom" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
-      </div>
-    </section>
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="logo">
+    <div class="initials is-bouncing">B.I.E.C</div>
+    <div class="fullname">Bright Ideas<br>Education Consultancy</div>
+  </div>
+</div>
 
-    <section id="contact" class="card contact-form">
-      <h2>Contact</h2>
-      <p class="muted">Fill the form or email us directly at <a href="mailto:info@brightideas.dm">info@brightideas.dm</a></p>
-      <form action="mailto:info@brightideas.dm" method="post" enctype="text/plain">
-        <label class="muted">Your name</label>
-        <input type="text" name="name" required>
-        <label class="muted">Email</label>
-        <input type="email" name="email" required>
-        <label class="muted">Message</label>
-        <textarea name="message" rows="4" required></textarea>
-        <button type="submit">Send message</button>
-      </form>
-
-      <div style="margin-top:10px" class="muted">Alternatively, open an email client: <a href="mailto:info@brightideas.dm">info@brightideas.dm</a></div>
-    </section>
-  </main>
-
-  <footer class="container">
-    <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
-      <div class="muted">© "Bright Ideas" Education Consultancy — All rights reserved</div>
-      <div class="muted">Made with care • Dominica</div>
-    </div>
-  </footer>
 
 </body>
 </html>
+
+
+
+
+does this contain the reop
