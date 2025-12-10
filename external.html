@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>External Sources - Learning Hub</title>
+
+  <link rel="stylesheet" href="learninghub.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" href="images/icon.png" type="image/png">
+
+  <style>
+    /* Heading styles */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 60px;
+      color: #3b594b;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1 + p {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 16px;
+      color: #3b594b;
+    }
+
+    /* External cards grid */
+    .external-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      padding: 0 20px;
+    }
+
+    /* Individual card */
+    .external-card {
+      background: #fdfdfd;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none; /* remove underline */
+      color: inherit; /* keep text color consistent */
+    }
+
+    .external-card i {
+      font-size: 40px;
+      color: #7c9758;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .external-card h3 {
+      margin-bottom: 10px;
+      color: #3b594b;
+      font-size: 18px;
+    }
+
+    .external-card p {
+      color: #444;
+      font-size: 14px;
+    }
+
+    .external-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      background: #fdf6d9;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .external-card:hover i {
+      color: #f0c933;
+    }
+
+    /* Dark mode */
+    body.dark-mode .external-card {
+      background: #1f1f1f;
+      color: #ddd;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    body.dark-mode .external-card:hover {
+      background: #333;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+
+    body.dark-mode .external-card i {
+      color: #f0c933;
+    }
+
+     body.dark-mode .external-card p {
+      color: whitesmoke;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f8f8f8;
+      font-size: 13px;
+      color: #666;
+      margin-top: auto;
+    }
+
+    /* Page layout */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+  <a href="https://www.facebook.com/BrightIdeasDominica/" target="_blank" class="fa-brands fa-facebook"></a>
+    <a href="https://www.linkedin.com/in/brightideasdominica/?originalSubdomain=dm" target="_blank" class="fa-brands fa-linkedin"></a>
+    <a href="https://www.instagram.com/brightideasdominica/" class="fa-brands fa-instagram" target="_blank" ></a>
+    <a href="https://www.tiktok.com/@bright.ideas767" class="fa-brands fa-tiktok" target="_blank" ></a>
+
+    <button id="darkModeToggle" class="dark-toggle" title="Toggle Dark Mode">☀️</button>
+  </header>
+
+  <!-- NAVIGATION -->
+  <div class="header">
+    <div class="nav-left">
+      <a href="index.html">HOME</a>
+      <a href="aboutpage.html">ABOUT</a>
+      <a href="servicespage.html">SERVICES</a>
+    </div>
+    <div class="nav-right">
+      <a href="learninghub.html">LEARNING HUB</a>
+      <a href="gallerypage.html">GALLERY</a>
+      <a href="contactpage.html">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- EXTERNAL SOURCES SECTION -->
+  <section class="content-section">
+    <h1>External Resources</h1>
+    <p>Helpful websites and tools for learning</p>
+
+    <div class="external-links">
+      <a href="https://www.readingrockets.org" target="_blank" class="external-card">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>Reading Rockets</h3>
+        <p>Resources to improve reading and literacy skills.</p>
+      </a>
+
+      <a href="https://www.education.com" target="_blank" class="external-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Education.com</h3>
+        <p>Printable worksheets and learning activities.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Bright Ideas Dominica. All rights reserved.</p>
+  </footer>
+  <script src="darkmode.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+/* =========================
+ GLOBAL STYLES
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background-color: #e6f4f2;
+  color: #444;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+/* =========================
+ FIRST HEADER: SOCIAL ICONS & DARK MODE
+========================= */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  background-color: #7c9758;
+  color: black;
+  padding: 10px 20px;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+header .social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .fa-brands {
+  font-size: 25px;
+  color: rgb(247, 207, 5);
+  padding: 10px;
+  margin: 0 2px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+header .fa-brands:hover { opacity: 0.8; }
+header .fa-brands:active { opacity: 0.5; }
+
+/* Dark Mode Toggle Button */
+header .dark-toggle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(247, 207, 5);
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 
+    background-color 0.5s ease, 
+    color 0.5s ease, 
+    transform 0.2s ease,
+    box-shadow 0.5s ease;
+}
+
+header .dark-toggle:hover {
+  transform: scale(1.1);
+  background-color: #f2d44d;
+}
+
+body.dark-mode header .dark-toggle {
+  background-color: #444;
+  color: #f0c933;
+  box-shadow: 0 0 12px 3px #f0c933;
+}
+
+/* =========================
+ SECOND HEADER: NAVIGATION
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a8bf8a;
+  padding: 10px 20px;
+  transition: background-color 0.5s ease;
+}
+
+.nav-left, .nav-right { display: flex; gap: 20px; }
+
+.header a {
+  color: #3b594b;
+  text-decoration: none;
+  font-size: 13.5px;
+  line-height: 25px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: color 0.5s ease;
+}
+
+.header a:hover {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  opacity: 0.8;
+}
+
+
+/* =========================
+ HERO / MAIN SECTION
+========================= */
+.main-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 5%;
+  gap: 65px;
+  background-color: #e6f4f2;
+  transition: background-color 0.5s ease;
+}
+
+.hero-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border: 10px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-text {
+  padding-bottom: 55px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 45px;
+  color: #008080;
+  margin-bottom: 25px;
+  transition: color 0.5s ease;
+}
+
+.hero-text h2 {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;            
+  font-size: 45px;
+  color: transparent;             
+  -webkit-text-stroke: 0.1vw #7c9758;  
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(9, end) forwards, fillText 1s 3s forwards;
+  transition: color 0.5s ease;
+}
+
+.hero-text h2::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #7c9758;   
+  animation: blink 0.9s steps(1) infinite;
+}
+
+.hero-text span {
+  margin-top: 25px;
+  text-decoration: underline;
+  text-decoration-color: rgb(247, 207, 5);
+  text-underline-offset: 10px;
+  color: rgb(0, 0, 0);
+  font-family: 'Cedarville Cursive';
+  transition: color 0.5s ease;
+}
+
+.hero-text p {
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.about-me-button {
+  color: rgb(255, 255, 255); 
+  background-color: #008080;
+  border: solid 3px transparent; 
+  height: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  width: 170px;
+  padding: 10px 15px;
+  padding-bottom: 30px;
+  position: relative; 
+  margin-top: 20px;
+  border-radius: 6px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.about-me-button:hover { 
+  opacity: 0.8; 
+}
+.about-me-button:active { 
+  opacity: 0.5; 
+}
+
+
+/* =========================
+ DARK MODE STYLES
+========================= */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .header { 
+  background-color: #3b594b; 
+}
+body.dark-mode header { 
+  background-color: #10241b; 
+}
+
+body.dark-mode .nav-left a,
+body.dark-mode .nav-right a,
+body.dark-mode .coming-soon { 
+  color: #f0c933; 
+}
+
+body.dark-mode .hero { 
+  background-color: #121212; 
+}
+
+body.dark-mode .hero-text h1 { 
+  color: #00bfbf; 
+}
+
+body.dark-mode .hero-text h2 {
+  -webkit-text-stroke: 0.1vw #f0c933;
+  color: #f0c933;
+}
+
+body.dark-mode .hero-text span {
+  color: #f0c933;
+  text-decoration-color: #f0c933;
+}
+
+body.dark-mode .about-me-button {
+  background-color: #00bfbf;
+  color: #121212;
+}
+
+/* =========================
+   UNIVERSAL RESPONSIVE DESIGN
+   (Applies across all pages)
+========================= */
+
+/* Medium screens — Tablets */
+@media screen and (max-width: 992px) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-left, 
+  .nav-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 50px 8%;
+    margin: 20px 5%;
+  }
+
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 15px; }
+
+  .card-container,
+  .info-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .card,
+  .info-card {
+    width: 280px;
+  }
+
+  .highlight-box {
+    margin: 50px auto;
+    padding: 35px;
+  }
+}
+
+/* Small tablets and large phones */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-left, 
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero {
+    padding: 40px 6%;
+    text-align: center;
+  }
+
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 14px; }
+
+  .what-i-do,
+  .info-cards,
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight-box {
+    padding: 25px;
+    margin: 40px 6%;
+  }
+
+  footer {
+    font-size: 12.5px;
+  }
+}
+
+/* Phones — narrow screens */
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .nav-left, 
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .hero {
+    padding: 30px 5%;
+    margin: 10px 4%;
+  }
+
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: 13.5px; }
+
+  .card,
+  .info-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .highlight-box {
+    padding: 20px;
+    margin: 30px 5%;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
