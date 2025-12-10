@@ -193,9 +193,9 @@ body.dark-mode header .dark-toggle {
 }
 
 .category-card {
- height: 155px;   
-  justify-content: center;    
   background: #ffffff;
+  height: 155px;   
+  justify-content: center;    
   padding: 25px;
   border-radius: 15px;
   text-align: center;
@@ -400,5 +400,6 @@ body.dark-mode footer {
 
   .icon { font-size: 30px; }
 }
+
 
 
