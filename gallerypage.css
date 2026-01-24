@@ -186,10 +186,21 @@ body.dark-mode header .dark-toggle {
 /* --- Gallery Title --- */
 .gallery-text {
   text-align: center;
-  font-size: medium;
-  color: #4d5f36;
-  padding-top: 30px;
+  font-size: 1.5rem;
+  color: #4F6A58;
   font-family: 'Playfair Display', serif;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.gallery-text::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f7cf05;
+  margin: 10px auto 0; 
+  border-radius: 2px;
 }
 
 /* =========================
@@ -284,9 +295,17 @@ body.dark-mode .coming-soon {
   color: #f0c933; 
 }
 
+body.dark-mode .gallery-text {
+  color: #A3C28B;
+}
+
+body.dark-mode .gallery-text::after {
+  background: #F7D86B;
+}
+
 body.dark-mode footer {
   background-color: #000;
-  color: #7c9758;
+  color: #A3C28B;
 }
 
 
@@ -325,6 +344,7 @@ body.dark-mode footer {
   .hero h1 { 
     font-size: 2rem; 
   }
+
   .hero p {
      font-size: 15px; 
     }
@@ -440,7 +460,6 @@ body.dark-mode footer {
   }
 }
 
-/* Hide footer when gallery filtering is active */
 .hide-footer footer {
   display: none !important;
 }
