@@ -243,7 +243,7 @@ body.dark-mode .hero {
 }
 
 body.dark-mode .hero-text h1 { 
-  color: #00bfbf; 
+  color: #7c9758; 
 }
 
 body.dark-mode .hero-text h2 {
@@ -253,11 +253,11 @@ body.dark-mode .hero-text h2 {
 
 body.dark-mode .hero-text span {
   color: #f0c933;
-  text-decoration-color: #f0c933;
+  text-decoration-color: #e6f4f2;
 }
 
 body.dark-mode .about-me-button {
-  background-color: #00bfbf;
+  background-color: #7c9758;
   color: #121212;
 }
 
