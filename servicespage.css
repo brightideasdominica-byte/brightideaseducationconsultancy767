@@ -118,7 +118,7 @@ body.dark-mode header .dark-toggle {
 }
 
 /* ---------- Typography (match About page vibe) ---------- */
-h1, h2, h3 {
+h1, h2 {
   font-family: 'Playfair Display', serif;
   color: #2d2d2d;
   margin-bottom: 12px;
@@ -158,10 +158,25 @@ h3 {
 }
 
 /* ---------- What I Do / Cards ---------- */
-.what-i-do {
+
+
+.what-i-do h2 {
   text-align: center;
-  padding: 64px 6%;
-  margin-top: 18px;
+  font-size: 2.5rem;
+  color: #4F6A58;
+  font-family: 'Playfair Display', serif;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.what-i-do h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f7cf05;
+  margin: 10px auto 0; 
+  border-radius: 2px;
 }
 
 .card-container {
@@ -255,7 +270,7 @@ h3 {
 }
 .info-card i {
   font-size: 26px;
-  color: #7c9758;
+  color: #A3C28B;
   margin-bottom: 8px;
 }
 .info-card p {
@@ -263,7 +278,7 @@ h3 {
   color: #555;
 }
 
-/* ---------- Highlight Box (Call to action) ---------- */
+/* ---------- Highlight Box ---------- */
 .highlight-box {
   background: #ceebdd;
   padding: 34px;
@@ -290,13 +305,25 @@ h3 {
   margin-top: 95px;
 }
 
+
 .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #3b594b;
   text-align: center;
+  font-size: 2.5rem;
+  color: #4F6A58;
+  font-family: 'Playfair Display', serif;
+  margin: 2rem 0;
+  position: relative;
 }
 
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f7cf05;
+  margin: 10px auto 0; 
+  border-radius: 2px;
+}
 .impact-intro {
   max-width: 700px;
   margin: 0 auto 40px;
@@ -405,265 +432,141 @@ footer {
   font-size: 13px;
   color: #666;
 }
+/* =========================
+   RESPONSIVE STYLES FOR SERVICES PAGE
+========================= */
 
-
-/* ---------- Responsive ---------- */
-/* Mobile (max-width: 600px) */
-@media screen and (max-width: 600px) {
+/* Medium screens / tablets (≤992px) */
+@media screen and (max-width: 992px) {
   .header {
-      flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
+
   .nav-left, .nav-right {
-      flex-direction: column;
-      align-items: center;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .hero { margin: 20px 6%; padding: 40px 18px; }
-  .card-container { gap: 14px; }
-  .card { width: 220px; }
-  .info-cards { padding: 28px 6%; }
-}
-
-@media screen and (max-width: 680px) {
-  .card { 
-    width: 100%; 
-    max-width: 420px; 
-  }
-  .card-container { 
-    flex-direction: column; 
-    align-items: center; 
-  }
-  .info-cards { 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 12px; 
-    padding: 22px; }
-  .hero h1 { 
-    font-size: 1.4rem; 
-  }
-}
-
-/* =========================
- DARK MODE STYLES
-========================= */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode .header { 
-  background-color: #3b594b;
- }
-body.dark-mode header { 
-  background-color: #10241b; 
-}
-
-body.dark-mode .nav-left a,
-body.dark-mode .nav-right a,
-body.dark-mode .coming-soon { 
-  color: #f0c933; 
-}
-
-body.dark-mode .card{
-  background-color: #2d2d2d;
-  box-shadow: 0 6px 20px rgba(129, 213, 114, 0.06);
-
-}
-
-body.dark-mode .card i,
-body.dark-mode .card p{
-  color:white;
-}
-
-body.dark-mode footer {
-  background-color: #000;
-  color: #7c9758;
-}
-
-body.dark-mode .card h3 {
-  color: #ffffff;
-}
-
-body.dark-mode .what-i-do h2 {
-  color: rgb(134, 234, 116);
-}
-
-body.dark-mode #impact{
-  background-color:#121212 ;
-}
-
-body.dark-mode .section-title {
-  color: rgb(134, 234, 116);
-}
-
-body.dark-mode .impact-intro {
-  color: #ffffff;
-}
-
-body.dark-mode .stat-card h3,
-body.dark-mode .stat-card p{
-  color: #ffffff;
-}
-
-body.dark-mode .stat-card {
-  background-color: #2d2d2d;
-  box-shadow: 0 6px 20px rgba(129, 213, 114, 0.06);
-}
-
-body.dark-mode .testimonial-card {
-  background-color: #2d2d2d;
-  box-shadow: 0 6px 20px rgba(129, 213, 114, 0.06);
-}
-
-body.dark-mode .testimonial-card span {
-  color: #ffffff;
-}
-
-body.dark-mode .testimonials h3{
-  color: rgb(134, 234, 116);
-}
-
-
-/* =========================
-   UNIVERSAL RESPONSIVE DESIGN
-   (For tablets & phones)
-========================= */
-
-/* Tablets and medium screens (≤992px) */
-@media screen and (max-width: 992px) {
-  header {
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .nav-left, 
-  .nav-right {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
   }
 
-  .hero {
-    padding: 50px 8%;
-    margin: 20px 5%;
-  }
-
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 15px; }
-
-  .card-container,
-  .info-cards {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .card,
-  .info-card {
-    width: 280px;
-  }
-
-  .highlight-box {
-    margin: 50px auto;
-    padding: 35px;
-  }
-}
-
-/* Small tablets and large phones (≤768px) */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .nav-left, 
-  .nav-right {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .hero {
-    padding: 40px 6%;
-    text-align: center;
-  }
-
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 14px; }
-
-  .what-i-do,
-  .info-cards,
   .card-container {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px auto;
+    padding: 0 20px;
   }
 
-  .highlight-box {
-    padding: 25px;
-    margin: 40px 6%;
+  .card {
+    padding: 20px;
   }
 
-  footer {
-    font-size: 12.5px;
+  h2.section-title, .what-i-do h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .impact-intro {
+    font-size: 16px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+  }
+
+  .impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+  }
+
+  .testimonial-card {
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+}
+
+/* Small tablets / large phones (≤768px) */
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .impact-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .impact-intro {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .testimonial-card {
+    padding: 12px;
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
   }
 }
 
 /* Phones (≤480px) */
 @media screen and (max-width: 480px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 10px;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-  }
-
-  .nav-left, 
-  .nav-right {
+  header, .header, .nav-left, .nav-right {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    text-align: center;
   }
 
-  .hero {
-    padding: 30px 5%;
-    margin: 10px 4%;
+  .card {
+    padding: 15px;
   }
 
-  .hero h1 { font-size: 1.6rem; }
-  .hero p { font-size: 13.5px; }
-
-  .card,
-  .info-card {
-    width: 100%;
-    max-width: 320px;
+  .card i {
+    font-size: 28px;
   }
 
-  .highlight-box {
-    padding: 20px;
-    margin: 30px 5%;
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .impact-intro {
+    font-size: 14px;
+  }
+
+  .impact-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .testimonial-card {
+    padding: 10px;
+  }
+
+  .testimonial-card p {
+    font-size: 13px;
+  }
+
+  .what-i-do h2,
+  .section-title {
+    font-size: 1.6rem;
   }
 
   footer {
