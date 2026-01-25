@@ -137,17 +137,29 @@ body.dark-mode header .dark-toggle {
 
 .learning-hero {
   text-align: center;
-  padding: 60px 20px;
 }
 
-.learning-hero h1 {
-  font-size: 35px;
-  color: #3b594b;
+.learning-hero h1{
+  text-align: center;
+  font-size: 2.8rem;
+  color: #4F6A58;
   font-family: 'Playfair Display', serif;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.learning-hero h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f7cf05;
+  margin: 10px auto 0; 
+  border-radius: 2px;
 }
 
 .learning-hero p {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 10px;
 }
 
@@ -190,13 +202,15 @@ body.dark-mode header .dark-toggle {
   gap: 20px;
   max-width: 1000px;
   margin: -40px auto 40px;
+    padding: 50px;
+
 }
 
 .category-card {
   background: #ffffff;
   height: 155px;   
   justify-content: center;    
-  padding: 25px;
+  padding: 20px;
   border-radius: 15px;
   text-align: center;
   cursor: pointer;
@@ -207,7 +221,7 @@ body.dark-mode header .dark-toggle {
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
-  background: #fdf6d9;
+  background: #d4e0c0;
 }
 
 .category-card.active {
@@ -245,30 +259,7 @@ body.dark-mode header .dark-toggle {
     padding: 20px;
   }
 }
-/*Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-.up a {
-  background-color: #68b0b0;
-  color: black;
-  position: fixed;
-  bottom: 10px;
-  right: 20px;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 16px;
-}
 
-.up a:hover {
-  transform: translateY(-10%);
-  transition: 0.2s;
-}
 /* =========================
    FOOTER
 ========================= */
@@ -325,81 +316,124 @@ body.dark-mode .search-box input:focus {
   box-shadow: 0 0 10px rgba(240, 201, 51, 0.6);
 }
 
+body.dark-mode .icon {
+ color: #A3C28B;
+}
 body.dark-mode footer {
   background: #000;
   color: #7c9758;
 }
 
+body.dark-mode .categories h3{
+  color: #A3C28B;
+}
+
 /* =========================
    RESPONSIVE DESIGN
 ========================= */
-@media screen and (max-width: 992px) {
+/* =========================
+   BIEC MOBILE – STELLAR STYLE
+========================= */
+@media screen and (max-width: 600px) {
+
+  /* ===== TOP HEADER ===== */
   header {
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px;
+    padding: 10px 12px;
   }
 
+  header .social-icons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 8px;
+  }
+
+  header .fa-brands {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  header .dark-toggle {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  /* ===== NAV BAR (STACKED LIKE STELLAR) ===== */
   .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px;
+    padding: 10px 12px;
   }
 
-  .nav-left, 
+  .nav-left,
   .nav-right {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
   }
-}
 
-@media screen and (max-width: 768px) {
-  header { flex-direction: column; gap: 10px; }
-  .header { flex-direction: column; align-items: center; gap: 10px; }
-  .nav-left, .nav-right { flex-direction: column; align-items: center; gap: 8px; }
-
-  .learning-hero {
-    padding: 40px 6%;
+  .header a {
+    font-size: 12px;          
+    letter-spacing: 0.4px;
+    padding: 6px 0;
+    width: 100%;
     text-align: center;
   }
 
-  .learning-hero h1 { font-size: 28px; }
-  .learning-hero p { font-size: 14px; }
-
-  .categories {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  /* ===== HERO TEXT ===== */
+  .learning-hero h1 {
+    font-size: 22px;
+    margin: 1.4rem 0;
   }
 
-  .category-card {
+  .learning-hero p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* ===== SEARCH BAR ===== */
+  .search-box {
     width: 90%;
-    max-width: 320px;
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header { flex-direction: column; align-items: center; gap: 6px; padding: 8px 10px; }
-  .header { flex-direction: column; align-items: center; gap: 6px; text-align: center; }
-  .nav-left, .nav-right { flex-direction: column; align-items: center; gap: 5px; }
-
-  .learning-hero {
-    padding: 30px 5%;
+    margin: 24px auto;
   }
 
-  .learning-hero h1 { font-size: 24px; }
-  .learning-hero p { font-size: 13px; }
+  .search-box input {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  /* ===== CATEGORY CARDS ===== */
+  .categories {
+    padding: 30px 15px;
+    gap: 14px;
+  }
 
   .category-card {
-    width: 100%;
     padding: 18px;
+    height: auto;
   }
 
-  .icon { font-size: 30px; }
+  .category-card h3 {
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    font-size: 12px;
+    padding: 16px;
+  }
 }
-
-
-
