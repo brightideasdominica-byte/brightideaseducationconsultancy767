@@ -144,14 +144,9 @@ h3 {
 ========================= */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 0px 20px;
   margin: 20px 10%;
   background: white;
-}
-
-.hero h1 {
-  margin-bottom: 16px;
-  color: #3b594b;
 }
 
 .hero p {
@@ -159,6 +154,26 @@ h3 {
   margin: 0 auto;
   font-size: 16px;
   color: #555;
+}
+
+.hero h1{
+  text-align: center;
+  font-size: 3rem;
+  color: #4F6A58;
+  font-family: 'Playfair Display', serif;
+
+  margin: 2rem 0;
+  position: relative;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f7cf05;
+  margin: 10px auto 0; 
+  border-radius: 2px;
 }
 
 /* =========================
@@ -174,6 +189,21 @@ h3 {
 .what-i-do h2 {
   margin-bottom: 24px;
   color: #6b6fbf; 
+  font-size: 2.5rem;
+   font-family: 'Playfair Display', serif;
+  margin: 3rem 0;
+  position: relative;
+
+}
+
+.what-i-do h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f7cf05;
+  margin: 10px auto 0; 
+  border-radius: 2px;
 }
 
 /* Card container */
@@ -273,8 +303,12 @@ h3 {
 }
 
 .highlight-box h2 {
-  margin-bottom: 12px;
+  text-align: center;
+  font-size: 1.5rem;
   color: #a46ea9;
+  font-family: 'Playfair Display', serif;
+  margin: 2rem 0;
+  position: relative;
 }
 
 .highlight-box p {
@@ -368,9 +402,11 @@ body.dark-mode footer {
 body.dark-mode .what-i-do{
   background-color: #181818;
 }
-
+body.dark-mode .hero h1{
+  color: #A3C28B;
+}
 body.dark-mode .what-i-do h2 {
-  color: #7c9758;
+  color: #9699d5;
 }
 
 body.dark-mode .card{
@@ -378,7 +414,7 @@ body.dark-mode .card{
 }
 
 body.dark-mode .card i{
-  color:#7c9758;
+  color:#a46ea9;
 }
 
 body.dark-mode .card h3, 
@@ -395,7 +431,7 @@ body.dark-mode .info-card{
 }
 
 body.dark-mode .info-card i{
-  color:#a46ea9;
+  color:#7c9758;
 }
 
 body.dark-mode .info-card h3, 
