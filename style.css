@@ -9,11 +9,10 @@
 
 body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  background-color: #e6f4f2;
-  color: #444;
+  background-color: #e6f4f2; /* light mode background */
+  color: #444; /* default text color */
   transition: background-color 0.5s ease, color 0.5s ease;
 }
-
 
 /* =========================
  FIRST HEADER: SOCIAL ICONS & DARK MODE
@@ -23,7 +22,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   gap: 15px;
-  background-color: #7c9758;
+  background-color: #7c9758; /* light green header */
   color: black;
   padding: 10px 20px;
   position: relative;
@@ -86,7 +85,7 @@ body.dark-mode header .dark-toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a8bf8a;
+  background-color: #a8bf8a; /* light green */
   padding: 10px 20px;
   transition: background-color 0.5s ease;
 }
@@ -110,7 +109,6 @@ body.dark-mode header .dark-toggle {
   text-underline-offset: 6px;
   opacity: 0.8;
 }
-
 
 /* =========================
  HERO / MAIN SECTION
@@ -138,14 +136,11 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   width: 100%;
   height: auto;
   border: 6px solid white;
-  transition: transform 0.3s ease;
-  border-radius: 18px;
+  border-radius: 18px; /* rounded edges for desktop */
   box-shadow:
     0 0 25px rgba(247, 207, 5, 0.35),
     0 10px 30px rgba(0, 0, 0, 0.15);
-  transition: 
-    transform 0.3s ease,
-    box-shadow 0.4s ease;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
 }
 
 .hero-text {
@@ -155,7 +150,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
 .hero-text h1 {
   font-size: 45px;
-  color: #008080;
+  color: #4F6A58; 
   margin-bottom: 25px;
   transition: color 0.5s ease;
 }
@@ -200,7 +195,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
 .about-me-button {
   color: rgb(255, 255, 255); 
-  background-color: #008080;
+  background-color: #4F6A58;
   border: solid 3px transparent; 
   height: 30px;
   cursor: pointer;
@@ -221,7 +216,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 .about-me-button:active { 
   opacity: 0.5; 
 }
-
 
 /* =========================
  DARK MODE STYLES
@@ -249,7 +243,7 @@ body.dark-mode .hero {
 }
 
 body.dark-mode .hero-text h1 { 
-  color: #7c9758; 
+  color: #A3C28B;
 }
 
 body.dark-mode .hero-text h2 {
@@ -263,162 +257,113 @@ body.dark-mode .hero-text span {
 }
 
 body.dark-mode .about-me-button {
-  background-color: #7c9758;
+  background-color: #A3C28B;
   color: #121212;
 }
 
 /* =========================
-   UNIVERSAL RESPONSIVE DESIGN
-   (Applies across all pages)
+   FOOTER
 ========================= */
-
-/* Medium screens — Tablets */
-@media screen and (max-width: 992px) {
-  header {
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .nav-left, 
-  .nav-right {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .hero {
-    padding: 50px 8%;
-    margin: 20px 5%;
-  }
-
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 15px; }
-
-  .card-container,
-  .info-cards {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .card,
-  .info-card {
-    width: 280px;
-  }
-
-  .highlight-box {
-    margin: 50px auto;
-    padding: 35px;
-  }
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background: #f8f8f8;
+  font-size: 13px;
+  color: #666;
 }
 
-/* Small tablets and large phones */
+/* =========================
+   MOBILE STACK + TEXT SCALE
+========================= */
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .header {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .nav-left, 
-  .nav-right {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .hero {
-    padding: 40px 6%;
-    text-align: center;
-  }
-
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 14px; }
-
-  .what-i-do,
-  .info-cards,
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .highlight-box {
-    padding: 25px;
-    margin: 40px 6%;
-  }
-
-  footer {
-    font-size: 12.5px;
-  }
-}
-
-/* Phones — narrow screens */
-@media screen and (max-width: 480px) {
+  /* ===== FIRST HEADER (SOCIALS) ===== */
   header {
     flex-direction: column;
     align-items: center;
-    gap: 6px;
-    padding: 8px 10px;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 12px;
   }
 
+  header .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  header .fa-brands {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  header .dark-toggle {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  /* ===== NAVIGATION ===== */
   .header {
     flex-direction: column;
-    gap: 6px;
-    text-align: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
   }
 
-  .nav-left, 
+  .nav-left,
   .nav-right {
     flex-direction: column;
     align-items: center;
-    gap: 5px;
-  }
-
-  .hero {
-    padding: 30px 5%;
-    margin: 10px 4%;
-  }
-
-  .hero h1 { font-size: 1.6rem; }
-  .hero p { font-size: 13.5px; }
-
-  .card,
-  .info-card {
+    gap: 6px;
     width: 100%;
-    max-width: 320px;
   }
 
-  .highlight-box {
-    padding: 20px;
-    margin: 30px 5%;
+  .header a {
+    font-size: 12px;        
+    padding: 5px 8px;
+    text-align: center;
+    width: 100%;
   }
 
-  footer {
-    font-size: 12px;
-    padding: 10px;
+  /* ===== HERO TEXT SCALE ===== */
+  .hero-text h1 {
+    font-size: 1.8rem;
   }
-}
 
-@media screen and (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about-me-button {
+    font-size: 13px;
+    width: 150px;
+    padding: 8px 12px;
+  }
+
+  /* ===== HERO IMAGE ===== */
   .hero {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
+    padding: 25px 5%;
   }
 
   .hero-image {
-    order: -1; 
+    order: -1; /* image first on mobile */
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero-image img {
+    border-radius: 0;
+  }
 
   .hero-text {
     order: 1;
