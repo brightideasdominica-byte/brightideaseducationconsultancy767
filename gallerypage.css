@@ -308,14 +308,13 @@ body.dark-mode footer {
   color: #A3C28B;
 }
 
-
 /* =========================
-   UNIVERSAL RESPONSIVE DESIGN
-   (For tablets & phones)
+   RESPONSIVE GALLERY + HEADER
 ========================= */
 
 /* Tablets and medium screens (≤992px) */
 @media screen and (max-width: 992px) {
+
   header {
     justify-content: center;
     flex-wrap: wrap;
@@ -328,47 +327,36 @@ body.dark-mode footer {
     gap: 12px;
   }
 
-  .nav-left, 
-  .nav-right {
+  .nav-left, .nav-right {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
   }
 
-  .hero {
-    padding: 50px 8%;
-    margin: 20px 5%;
-  }
-
-  .hero h1 { 
-    font-size: 2rem; 
-  }
-
-  .hero p {
-     font-size: 15px; 
-    }
-
-  .card-container,
-  .info-cards {
+  .gallery-images {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    padding-left: 0;
+    gap: 1.5em;
   }
 
-  .card,
-  .info-card {
-    width: 280px;
+  .gallery-images img,
+  .gallery-images video {
+    width: 45%;
+    height: auto;
+    margin: 0 auto;
   }
 
-  .highlight-box {
-    margin: 50px auto;
-    padding: 35px;
+  .buttons button {
+    font-size: 1em;
+    padding: 0.6em 1.2em;
   }
 }
 
 /* Small tablets and large phones (≤768px) */
 @media screen and (max-width: 768px) {
+
   header {
     flex-direction: column;
     gap: 10px;
@@ -380,40 +368,33 @@ body.dark-mode footer {
     gap: 10px;
   }
 
-  .nav-left, 
-  .nav-right {
+  .nav-left, .nav-right {
     flex-direction: column;
     align-items: center;
     gap: 8px;
   }
 
-  .hero {
-    padding: 40px 6%;
-    text-align: center;
-  }
-
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 14px; }
-
-  .what-i-do,
-  .info-cards,
-  .card-container {
+  .gallery-images {
     flex-direction: column;
     align-items: center;
   }
 
-  .highlight-box {
-    padding: 25px;
-    margin: 40px 6%;
+  .gallery-images img,
+  .gallery-images video {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin: 0.7em 0;
   }
 
-  footer {
-    font-size: 12.5px;
+  .buttons button {
+    width: 100%;
   }
 }
 
 /* Phones (≤480px) */
 @media screen and (max-width: 480px) {
+
   header {
     flex-direction: column;
     align-items: center;
@@ -428,38 +409,23 @@ body.dark-mode footer {
     text-align: center;
   }
 
-  .nav-left, 
-  .nav-right {
+  .nav-left, .nav-right {
     flex-direction: column;
     align-items: center;
     gap: 5px;
   }
 
-  .hero {
-    padding: 30px 5%;
-    margin: 10px 4%;
-  }
-
-  .hero h1 { font-size: 1.6rem; }
-  .hero p { font-size: 13.5px; }
-
-  .card,
-  .info-card {
+  .gallery-images img,
+  .gallery-images video {
     width: 100%;
     max-width: 320px;
+    height: auto;
+    margin: 0.5em 0;
   }
 
-  .highlight-box {
-    padding: 20px;
-    margin: 30px 5%;
+  .buttons button {
+    width: 100%;
+    font-size: 0.95em;
+    padding: 0.5em 1em;
   }
-
-  footer {
-    font-size: 12px;
-    padding: 10px;
-  }
-}
-
-.hide-footer footer {
-  display: none !important;
 }
