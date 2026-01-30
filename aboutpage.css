@@ -22,12 +22,23 @@ header {
   justify-content: flex-end;
   align-items: center;
   gap: 15px;
-  background-color: #7c9758;
   color: black;
   padding: 10px 20px;
   position: relative;
   transition: background-color 0.5s ease;
+
+ background: linear-gradient(90deg, #4f6a58, #6a8c66, #7c9758, #4f6a58);
+  background-size: 300% 300%;
+  animation: greenGradient 15s ease infinite;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
 }
+
+@keyframes greenGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 header .social-icons {
   display: flex;
@@ -67,17 +78,6 @@ header .dark-toggle {
     box-shadow 0.5s ease;
 }
 
-header .dark-toggle:hover {
-  transform: scale(1.1);
-  background-color: #f2d44d;
-}
-
-body.dark-mode header .dark-toggle {
-  background-color: #444;
-  color: #f0c933;
-  box-shadow: 0 0 12px 3px #f0c933;
-}
-
 /* =========================
  SECOND HEADER: NAVIGATION
 ========================= */
@@ -85,9 +85,15 @@ body.dark-mode header .dark-toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a8bf8a;
   padding: 10px 20px;
   transition: background-color 0.5s ease;
+  background: linear-gradient(
+    90deg,
+    #a8bf8a,   
+    #9dc18f,  
+    #b1d29b,   
+    #8fbf8a    
+  )
 }
 
 .nav-left, 
@@ -122,6 +128,56 @@ body.dark-mode header .dark-toggle {
 }
 
 /* =========================
+ DARK MODE: FIRST NAV BAR
+========================= */
+body.dark-mode header {
+  background: linear-gradient(135deg, #2b3a2b, #1f2a1f); 
+  color: #f0c933; 
+}
+
+/* Social icons in dark mode */
+body.dark-mode header .fa-brands {
+  color: #f0c933; 
+}
+
+body.dark-mode header .fa-brands:hover {
+  opacity: 0.8;
+}
+
+/* Dark mode toggle button */
+body.dark-mode header .dark-toggle {
+  background-color: #444;  
+  color: #f0c933;
+  box-shadow: 0 0 12px 3px #f0c933;
+}
+/* =========================
+ DARK MODE SECOND BAR
+========================= */
+
+body.dark-mode header {
+  background-color: #10241b; 
+} 
+
+body.dark-mode .header {
+  background: linear-gradient(90deg, #3b594b, #2a3d33);
+}
+
+body.dark-mode .header a {
+  color: #cfd9c3; 
+}
+
+body.dark-mode .header a:hover {
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+body.dark-mode .nav-left,
+body.dark-mode .nav-right {
+  gap: 15px;
+}
+
+
+/* =========================
    TYPOGRAPHY
 ========================= */
 h1, h2, h3 {
@@ -138,6 +194,7 @@ h2 {
 h3 { 
   font-size: 1.2rem; 
 }
+
 
 /* =========================
    HERO SECTION
@@ -186,7 +243,7 @@ h3 {
   border-radius: 14px;
 }
 
-.what-i-do h2 {
+.what-i-do h1 {
   margin-bottom: 24px;
   color: #6b6fbf; 
   font-size: 2.5rem;
@@ -196,7 +253,7 @@ h3 {
 
 }
 
-.what-i-do h2::after {
+.what-i-do h1::after {
   content: "";
   display: block;
   width: 80px;
@@ -337,8 +394,10 @@ html {
   scroll-behavior: smooth;
 }
 .up a {
-  background-color: #68b0b0;
-  color: black;
+background: linear-gradient(135deg, #7abf7a, #5fa95f, #459345);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;  color: black;
   position: fixed;
   bottom: 10px;
   right: 20px;
@@ -356,6 +415,7 @@ html {
   transform: translateY(-10%);
   transition: 0.2s;
 }
+
 
 /* =========================
    FOOTER
@@ -457,39 +517,51 @@ body.dark-mode .highlight-box p {
 }
 
 /* =========================
-   RESPONSIVE DESIGN 
+ MOBILE 
 ========================= */
+@media screen and (max-width: 768px) {
 
-/* Tablets and medium screens (≤992px) */
-@media screen and (max-width: 992px) {
-  header {
+
+  .header {
+    flex-direction: column;    
+    align-items: center;       
+    gap: 5px;                 
+    padding: 8px 5%;          
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;           
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 8px;                  
+  }
+
+  .header a {
+    font-size: 12px;    
+    padding: 5px 8px;
+  }
+
+  header .fa-brands {
+    font-size: 20px;         
+    padding: 5px;
+  }
+  
+  /* Hero adjustments */
+  .hero {
+    padding: 40px 6%;
+    margin: 20px 5%;
     text-align: center;
   }
 
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+  .hero h1 {
+    font-size: 2rem;
   }
 
-  .nav-left, 
-  .nav-right {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+  .hero p {
+    font-size: 15px;
   }
 
-  .hero {
-    padding: 50px 8%;
-    margin: 20px 5%;
-  }
-
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 15px; }
-
+  /* Card & info adjustments */
   .card-container,
   .info-cards {
     flex-wrap: wrap;
@@ -512,129 +584,5 @@ body.dark-mode .highlight-box p {
   }
 }
 
-/* Small tablets and large phones (≤768px) */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
 
-  .nav-left, 
-  .nav-right {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .hero {
-    padding: 40px 6%;
-    text-align: center;
-  }
-
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 14px; }
-
-  .card-container,
-  .info-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 320px;
-    padding: 20px;
-  }
-
-  .info-card {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .highlight-box {
-    padding: 25px;
-    margin: 40px 6%;
-  }
-
-  .search-box {
-    width: 90%;
-  }
-
-  footer {
-    font-size: 12.5px;
-  }
-}
-
-/* Phones (≤480px) */
-@media screen and (max-width: 480px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 10px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .nav-left, 
-  .nav-right {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .hero {
-    padding: 30px 5%;
-    margin: 10px 4%;
-  }
-
-  .hero h1 { font-size: 1.6rem; }
-  .hero p { font-size: 13.5px; }
-
-  .card-container,
-  .info-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .card,
-  .info-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 15px;
-  }
-
-  .card i {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-
-  .highlight-box {
-    padding: 20px;
-    margin: 30px 5%;
-  }
-
-  .search-box {
-    width: 95%;
-  }
-
-  footer {
-    font-size: 12px;
-    padding: 10px;
-  }
-}
