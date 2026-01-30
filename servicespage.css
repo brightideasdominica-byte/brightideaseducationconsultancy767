@@ -14,6 +14,7 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+
 /* =========================
  FIRST HEADER: SOCIAL ICONS & DARK MODE
 ========================= */
@@ -22,12 +23,23 @@ header {
   justify-content: flex-end;
   align-items: center;
   gap: 15px;
-  background-color: #7c9758;
   color: black;
   padding: 10px 20px;
   position: relative;
   transition: background-color 0.5s ease;
+
+ background: linear-gradient(90deg, #4f6a58, #6a8c66, #7c9758, #4f6a58);
+  background-size: 300% 300%;
+  animation: greenGradient 15s ease infinite;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
 }
+
+@keyframes greenGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 header .social-icons {
   display: flex;
@@ -67,17 +79,6 @@ header .dark-toggle {
     box-shadow 0.5s ease;
 }
 
-header .dark-toggle:hover {
-  transform: scale(1.1);
-  background-color: #f2d44d;
-}
-
-body.dark-mode header .dark-toggle {
-  background-color: #444;
-  color: #f0c933;
-  box-shadow: 0 0 12px 3px #f0c933;
-}
-
 /* =========================
  SECOND HEADER: NAVIGATION
 ========================= */
@@ -85,12 +86,22 @@ body.dark-mode header .dark-toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a8bf8a;
   padding: 10px 20px;
   transition: background-color 0.5s ease;
+  background: linear-gradient(
+    90deg,
+    #a8bf8a,   
+    #9dc18f,  
+    #b1d29b,   
+    #8fbf8a    
+  )
 }
 
-.nav-left, .nav-right { display: flex; gap: 20px; }
+.nav-left, 
+.nav-right { 
+  display: flex; 
+  gap: 20px; 
+}
 
 .header a {
   color: #3b594b;
@@ -110,32 +121,81 @@ body.dark-mode header .dark-toggle {
   opacity: 0.8;
 }
 
-
+/* Main item container */
 .main-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ---------- Typography (match About page vibe) ---------- */
-h1, h2 {
+/* =========================
+ DARK MODE: FIRST NAV BAR
+========================= */
+body.dark-mode header {
+  background: linear-gradient(135deg, #2b3a2b, #1f2a1f); 
+  color: #f0c933; 
+}
+
+/* Social icons in dark mode */
+body.dark-mode header .fa-brands {
+  color: #f0c933; 
+}
+
+body.dark-mode header .fa-brands:hover {
+  opacity: 0.8;
+}
+
+/* Dark mode toggle button */
+body.dark-mode header .dark-toggle {
+  background-color: #444;  
+  color: #f0c933;
+  box-shadow: 0 0 12px 3px #f0c933;
+}
+/* =========================
+ DARK MODE SECOND BAR
+========================= */
+
+body.dark-mode header {
+  background-color: #10241b; 
+} 
+
+body.dark-mode .header {
+  background: linear-gradient(90deg, #3b594b, #2a3d33);
+}
+
+body.dark-mode .header a {
+  color: #cfd9c3; 
+}
+
+body.dark-mode .header a:hover {
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+body.dark-mode .nav-left,
+body.dark-mode .nav-right {
+  gap: 15px;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #2d2d2d;
-  margin-bottom: 12px;
 }
+
 h1 { 
-  font-size: 2.2rem; 
-  line-height: 1.15; 
-  color: #0e7646; 
+  font-size: 2.4rem; 
 }
 h2 { 
-  font-size: 40px; 
-  color: #3b594b; 
-  text-align: center; 
-  margin-top: 24px; }
+  font-size: 1.8rem; 
+}
 h3 { 
-  font-size: 1.05rem; 
-  color: #3b3b3b; }
+  font-size: 1.2rem; 
+}
+
 
 /* ---------- Hero ---------- */
 .hero {
@@ -160,16 +220,16 @@ h3 {
 /* ---------- What I Do / Cards ---------- */
 
 
-.what-i-do h2 {
-  text-align: center;
-  font-size: 2.5rem;
+.what-i-do h1 {
   color: #4F6A58;
+  text-align: center;
+  font-size: 3rem;
   font-family: 'Playfair Display', serif;
   margin: 2rem 0;
   position: relative;
 }
 
-.what-i-do h2::after {
+.what-i-do h1::after {
   content: "";
   display: block;
   width: 80px;
@@ -308,7 +368,7 @@ h3 {
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   color: #4F6A58;
   font-family: 'Playfair Display', serif;
   margin: 2rem 0;
@@ -401,9 +461,12 @@ h3 {
 html {
   scroll-behavior: smooth;
 }
+
 .up a {
-  background-color: #68b0b0;
-  color: black;
+background: linear-gradient(135deg, #7abf7a, #5fa95f, #459345);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;  color: black;
   position: fixed;
   bottom: 10px;
   right: 20px;
@@ -436,141 +499,228 @@ footer {
    RESPONSIVE STYLES FOR SERVICES PAGE
 ========================= */
 
-/* Medium screens / tablets (≤992px) */
-@media screen and (max-width: 992px) {
+ @media screen and (max-width: 768px) {
+
   .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;    
+    align-items: center;       
+    gap: 5px;                 
+    padding: 8px 5%;          
   }
 
-  .nav-left, .nav-right {
-    flex-wrap: wrap;
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;           
     justify-content: center;
-    gap: 12px;
+    gap: 8px;                  
   }
 
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin: 30px auto;
-    padding: 0 20px;
+  .header a {
+    font-size: 12px;    
+    padding: 5px 8px;
   }
 
-  .card {
-    padding: 20px;
+  header .fa-brands {
+    font-size: 20px;         
+    padding: 5px;
   }
 
-  h2.section-title, .what-i-do h2 {
-    font-size: 2rem;
-    text-align: center;
+  .header {
+    flex-direction: column;    
+    align-items: center;       
+    gap: 5px;                 
+    padding: 8px 5%;          
   }
 
-  .impact-intro {
-    font-size: 16px;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;           
+    justify-content: center;
+    gap: 8px;                  
   }
 
-  .impact-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    margin: 20px auto;
+  .header a {
+    font-size: 12px;    
+    padding: 5px 8px;
   }
 
-  .testimonial-card {
-    margin-bottom: 15px;
-    padding: 15px;
+  header .fa-brands {
+    font-size: 20px;         
+    padding: 5px;
   }
+
+  .section-title,
+  .what-i-do h1 {
+    font-size: 2rem;      
+    line-height: 1.2;
+    margin: 1.5rem 0;
+  }
+
+  .what-i-do h1 {
+    padding-top: 70px;
+  }
+
+  .section-title::after,
+  .what-i-do h1::after {
+    width: 60px;
+    height: 3px;
+    margin-top: 8px;
 }
 
-/* Small tablets / large phones (≤768px) */
-@media screen and (max-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 0 15px;
-  }
-
-  .card h3 {
-    font-size: 18px;
-  }
-
-  .card p {
-    font-size: 14px;
-  }
-
-  .impact-stats {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .impact-intro {
-    font-size: 15px;
-    padding: 0 10px;
-  }
-
-  .testimonial-card {
-    padding: 12px;
-  }
-
-  .testimonial-card p {
-    font-size: 14px;
-  }
 }
 
-/* Phones (≤480px) */
-@media screen and (max-width: 480px) {
-  header, .header, .nav-left, .nav-right {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    text-align: center;
-  }
+/* =========================
+   DARK MODE
+========================= */
 
-  .card {
-    padding: 15px;
-  }
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
 
-  .card i {
-    font-size: 28px;
-  }
+/* ---------- Headers ---------- */
+body.dark-mode header {
+  background: linear-gradient(135deg, #1f2a1f, #2b3a2b);
+}
 
-  .card h3 {
-    font-size: 16px;
-  }
+body.dark-mode .header {
+  background: linear-gradient(90deg, #3b594b, #2a3d33);
+}
 
-  .card p {
-    font-size: 13px;
-  }
+body.dark-mode .header a {
+  color: #f0c933;
+}
 
-  .impact-intro {
-    font-size: 14px;
-  }
+body.dark-mode .header a:hover {
+  color: #ffffff;
+}
 
-  .impact-stats {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
+/* ---------- Social Icons & Toggle ---------- */
+body.dark-mode header .fa-brands {
+  color: #f0c933;
+}
 
-  .testimonial-card {
-    padding: 10px;
-  }
+body.dark-mode header .dark-toggle {
+  background-color: #444;
+  color: #f0c933;
+  box-shadow: 0 0 10px rgba(240, 201, 51, 0.7);
+}
 
-  .testimonial-card p {
-    font-size: 13px;
-  }
+/* ---------- Typography ---------- */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #A3C28B; /* SAME as About page */
+}
 
-  .what-i-do h2,
-  .section-title {
-    font-size: 1.6rem;
-  }
+body.dark-mode p {
+  color: #e0e0e0;
+}
 
-  footer {
-    font-size: 12px;
-    padding: 10px;
-  }
+/* ---------- Hero ---------- */
+body.dark-mode .hero {
+  background-color: #181818;
+}
+
+body.dark-mode .hero h1 {
+  color: #A3C28B;
+}
+
+body.dark-mode .hero p {
+  color: #e0e0e0;
+}
+
+/* ---------- Section Titles ---------- */
+body.dark-mode .section-title,
+body.dark-mode .what-i-do h1 {
+  color: #A3C28B;
+}
+
+body.dark-mode .section-title::after,
+body.dark-mode .what-i-do h1::after {
+  background: #f0c933;
+}
+
+/* ---------- Cards ---------- */
+body.dark-mode .card {
+  background-color: #2d2d2d;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .card i {
+  color: #f0c933;
+}
+
+body.dark-mode .card h3,
+body.dark-mode .card p {
+  color: #ffffff;
+}
+
+/* ---------- Info Cards ---------- */
+body.dark-mode .info-cards {
+  background-color: #181818;
+}
+
+body.dark-mode .info-card {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .info-card i {
+  color: #A3C28B;
+}
+
+body.dark-mode .info-card h3,
+body.dark-mode .info-card p {
+  color: #ffffff;
+}
+
+/* ---------- Highlight Box ---------- */
+body.dark-mode .highlight-box {
+  background-color: #181818;
+}
+
+body.dark-mode .highlight-box h2 {
+  color: #f0c933;
+}
+
+body.dark-mode .highlight-box p {
+  color: #ffffff;
+}
+
+/* ---------- Impact Section ---------- */
+body.dark-mode #impact {
+  background-color: #181818;
+}
+
+body.dark-mode .impact-intro {
+  color: #e0e0e0;
+}
+
+body.dark-mode .stat-card {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .stat-card h3 {
+  color: #f0c933;
+}
+
+body.dark-mode .stat-card p {
+  color: #ffffff;
+}
+
+/* ---------- Testimonials ---------- */
+body.dark-mode .testimonial-card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+/* ---------- Footer ---------- */
+body.dark-mode footer {
+  background-color: #000;
+  color: #A3C28B;
+}
+
+/* ---------- Scroll Button ---------- */
+body.dark-mode .up a {
+  color: #000;
 }
