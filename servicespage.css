@@ -567,6 +567,11 @@ footer {
     margin-top: 8px;
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
 }
 
 /* =========================
