@@ -143,6 +143,7 @@ header .dark-toggle {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 /* =========================
@@ -214,6 +215,7 @@ h3 {
 }
 
 
+
 /* =========================
  HERO
 ========================= */
@@ -235,15 +237,15 @@ h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(247,207,5,0.1),
-    rgba(247,207,5,0.1) 2px,
-    transparent 2px,
-    transparent 20px
-  );
-  animation: stripesMove 10s linear infinite;
-  z-index: -2;
+  background: 
+    radial-gradient(
+      circle at top center,      
+      rgba(247, 207, 5, 0.18) 0%,    
+      rgba(247, 207, 5, 0.08) 50%,  
+      rgba(247, 207, 5, 0) 100%      
+    );
+  z-index: -1;
+  pointer-events: none;
 }
 
 @keyframes stripesMove {
@@ -377,6 +379,41 @@ h3 {
   100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
 }
 
+.up a {
+background: linear-gradient(135deg, #7abf7a, #5fa95f, #459345);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;  color: black;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.up a:hover {
+  transform: translateY(-10%);
+  transition: 0.2s;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background: #f8f8f8;
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
 
 
 /* =========================
@@ -386,6 +423,8 @@ body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
 }
+
+
 
 body.dark-mode .header { 
   background-color: #3b594b; 
@@ -444,6 +483,10 @@ body.dark-mode .about-me-button::before {
   pointer-events: none;
 }
 
+body.dark-mode footer {
+  background-color: #000;
+  color: #7c9758;
+}
 
 /* =========================
  MOBILE 
