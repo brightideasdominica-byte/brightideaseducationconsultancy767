@@ -485,6 +485,10 @@ body.dark-mode .categories h3{
     font-size: 13px;
   }
 
+ .search-box i {
+    padding-bottom: 50px;
+  }
+
   /* ===== CATEGORY CARDS ===== */
   .categories {
   display: grid;
@@ -531,4 +535,5 @@ body.dark-mode .categories h3{
     padding: 16px;
   }
 }
+
 
