@@ -471,8 +471,10 @@ html {
   scroll-behavior: smooth;
 }
 .up a {
-  background-color: #68b0b0;
-  color: black;
+background: linear-gradient(135deg, #7abf7a, #5fa95f, #459345);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;  color: black;
   position: fixed;
   bottom: 10px;
   right: 20px;
@@ -737,3 +739,4 @@ body.dark-mode .coming-soon {
     font-size: 12.5px;
   }
 }
+
