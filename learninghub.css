@@ -477,7 +477,7 @@ body.dark-mode .categories h3{
   .search-box {
     width: 90%;
     margin: 24px auto;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
   }
 
   .search-box input {
@@ -531,3 +531,4 @@ body.dark-mode .categories h3{
     padding: 16px;
   }
 }
+
