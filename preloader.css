@@ -35,7 +35,10 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.45);
 }
 
-  .initials.is-bouncing { animation: bounceSoft 1.6s ease infinite; }
+  .initials.is-bouncing { 
+    animation: bounceSoft 1.6s ease infinite; 
+    font-family: 'Playfair Display', serif;
+  }
 
   .fullname {
     text-align: center;
