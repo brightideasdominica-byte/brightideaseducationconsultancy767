@@ -538,7 +538,7 @@ body.dark-mode header .dark-toggle {
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
-  color: #A3C28B; /* SAME as About page */
+  color: #A3C28B;
 }
 
 body.dark-mode p {
@@ -649,12 +649,14 @@ body.dark-mode .up a {
 
 
 /* ---------- Footer ---------- */
-html.dark-mode footer,
-body.dark-mode footer {
+html.dark-mode footer p,
+body.dark-mode footer p {
   background-color: #000;
   color: #7c9758;
 }
-
+body.dark-mode footer {
+  background-color: #000;
+}
 /* =========================
    RESPONSIVE STYLES FOR SERVICES PAGE
 ========================= */
