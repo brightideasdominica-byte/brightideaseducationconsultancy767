@@ -495,113 +495,7 @@ footer {
   font-size: 13px;
   color: #666;
 }
-/* =========================
-   RESPONSIVE STYLES FOR SERVICES PAGE
-========================= */
 
- @media screen and (max-width: 768px) {
-
-  .header {
-    flex-direction: column;    
-    align-items: center;       
-    gap: 5px;                 
-    padding: 8px 5%;          
-  }
-
-  .nav-left,
-  .nav-right {
-    flex-wrap: wrap;           
-    justify-content: center;
-    gap: 8px;                  
-  }
-
-  .header a {
-    font-size: 12px;    
-    padding: 5px 8px;
-  }
-
-  header .fa-brands {
-    font-size: 20px;         
-    padding: 5px;
-  }
-
-  .header {
-    flex-direction: column;    
-    align-items: center;       
-    gap: 5px;                 
-    padding: 8px 5%;          
-  }
-
-  .nav-left,
-  .nav-right {
-    flex-wrap: wrap;           
-    justify-content: center;
-    gap: 8px;                  
-  }
-
-  .header a {
-    font-size: 12px;    
-    padding: 5px 8px;
-  }
-
-  header .fa-brands {
-    font-size: 20px;         
-    padding: 5px;
-  }
-
-  .section-title,
-  .what-i-do h1 {
-    font-size: 2rem;      
-    line-height: 1.2;
-    margin: 1.5rem 0;
-  }
-
-  .what-i-do h1 {
-    padding-top: 70px;
-  }
-
-  .section-title::after,
-  .what-i-do h1::after {
-    width: 60px;
-    height: 3px;
-    margin-top: 8px;
-}
-
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-
-.card i {
-  font-size: 22px;
-}
-
-.card h3 {
-  font-size: 1rem;
-}
-
-.card p {
-  font-size: 13px;
-}
-
- .card {
-    width: 100%;
-    max-width: 170px;
-    padding: 16px;
-  }
-
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    padding: 0 16px;
-    margin: 0 auto;
-    justify-items: center;
-  }
-
-}
 
 /* =========================
    DARK MODE
@@ -748,13 +642,109 @@ body.dark-mode .testimonial-card {
   color: #ffffff;
 }
 
-/* ---------- Footer ---------- */
-body.dark-mode footer {
-  background-color: #000;
-  color: #A3C28B;
-}
-
 /* ---------- Scroll Button ---------- */
 body.dark-mode .up a {
   color: #000;
+}
+
+
+/* ---------- Footer ---------- */
+html.dark-mode footer,
+body.dark-mode footer {
+  background-color: #000;
+  color: #7c9758;
+}
+
+/* =========================
+   RESPONSIVE STYLES FOR SERVICES PAGE
+========================= */
+
+ @media screen and (max-width: 768px) {
+
+  .header {
+    flex-direction: column;    
+    align-items: center;       
+    gap: 5px;                 
+    padding: 8px 5%;          
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;           
+    justify-content: center;
+    gap: 8px;                  
+  }
+
+  .header a {
+    font-size: 12px;    
+    padding: 5px 8px;
+  }
+
+  header .fa-brands {
+    font-size: 20px;         
+    padding: 5px;
+  }
+
+  .header {
+    flex-direction: column;    
+    align-items: center;       
+    gap: 5px;                 
+    padding: 8px 5%;          
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-wrap: wrap;           
+    justify-content: center;
+    gap: 8px;                  
+  }
+
+  .header a {
+    font-size: 12px;    
+    padding: 5px 8px;
+  }
+
+  header .fa-brands {
+    font-size: 20px;         
+    padding: 5px;
+  }
+
+  .section-title,
+  .what-i-do h1 {
+    font-size: 2rem;      
+    line-height: 1.2;
+    margin: 1.5rem 0;
+  }
+
+  .what-i-do h1 {
+    padding-top: 70px;
+  }
+
+  .section-title::after,
+  .what-i-do h1::after {
+    width: 60px;
+    height: 3px;
+    margin-top: 8px;
+}
+
+.card i {
+  font-size: 22px;
+}
+
+.card h3 {
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 13px;
+}
+
+ .card {
+    width: 100%;
+    max-width: 200px;
+    padding: 16px;
+  }
+
+
+
 }
