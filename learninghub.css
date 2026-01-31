@@ -23,19 +23,30 @@ body {
 }
 
 /* =========================
- HEADER: SOCIAL ICONS & DARK MODE
+ FIRST HEADER: SOCIAL ICONS & DARK MODE
 ========================= */
 header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 15px;
-  background-color: #7c9758;
   color: black;
   padding: 10px 20px;
   position: relative;
   transition: background-color 0.5s ease;
+
+ background: linear-gradient(90deg, #4f6a58, #6a8c66, #7c9758, #4f6a58);
+  background-size: 300% 300%;
+  animation: greenGradient 15s ease infinite;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
 }
+
+@keyframes greenGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 header .social-icons {
   display: flex;
@@ -52,12 +63,8 @@ header .fa-brands {
   transition: opacity 0.3s;
 }
 
-header .fa-brands:hover { 
-  opacity: 0.8; 
-}
-header .fa-brands:active { 
-  opacity: 0.5; 
-}
+header .fa-brands:hover { opacity: 0.8; }
+header .fa-brands:active { opacity: 0.5; }
 
 /* Dark Mode Toggle Button */
 header .dark-toggle {
@@ -79,17 +86,6 @@ header .dark-toggle {
     box-shadow 0.5s ease;
 }
 
-header .dark-toggle:hover {
-  transform: scale(1.1);
-  background-color: #f2d44d;
-}
-
-body.dark-mode header .dark-toggle {
-  background-color: #444;
-  color: #f0c933;
-  box-shadow: 0 0 12px 3px #f0c933;
-}
-
 /* =========================
  SECOND HEADER: NAVIGATION
 ========================= */
@@ -97,12 +93,22 @@ body.dark-mode header .dark-toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a8bf8a;
   padding: 10px 20px;
   transition: background-color 0.5s ease;
+  background: linear-gradient(
+    90deg,
+    #a8bf8a,   
+    #9dc18f,  
+    #b1d29b,   
+    #8fbf8a    
+  )
 }
 
-.nav-left, .nav-right { display: flex; gap: 20px; }
+.nav-left, 
+.nav-right { 
+  display: flex; 
+  gap: 20px; 
+}
 
 .header a {
   color: #3b594b;
@@ -122,10 +128,79 @@ body.dark-mode header .dark-toggle {
   opacity: 0.8;
 }
 
+/* Main item container */
 .main-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* =========================
+ DARK MODE: FIRST NAV BAR
+========================= */
+body.dark-mode header {
+  background: linear-gradient(135deg, #2b3a2b, #1f2a1f); 
+  color: #f0c933; 
+}
+
+/* Social icons in dark mode */
+body.dark-mode header .fa-brands {
+  color: #f0c933; 
+}
+
+body.dark-mode header .fa-brands:hover {
+  opacity: 0.8;
+}
+
+/* Dark mode toggle button */
+body.dark-mode header .dark-toggle {
+  background-color: #444;  
+  color: #f0c933;
+  box-shadow: 0 0 12px 3px #f0c933;
+}
+/* =========================
+ DARK MODE SECOND BAR
+========================= */
+
+body.dark-mode header {
+  background-color: #10241b; 
+} 
+
+body.dark-mode .header {
+  background: linear-gradient(90deg, #3b594b, #2a3d33);
+}
+
+body.dark-mode .header a {
+  color: #cfd9c3; 
+}
+
+body.dark-mode .header a:hover {
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+body.dark-mode .nav-left,
+body.dark-mode .nav-right {
+  gap: 15px;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2d2d2d;
+}
+
+h1 { 
+  font-size: 2.4rem; 
+}
+h2 { 
+  font-size: 1.8rem; 
+}
+h3 { 
+  font-size: 1.2rem; 
 }
 
 /* =========================
@@ -146,6 +221,10 @@ body.dark-mode header .dark-toggle {
   font-family: 'Playfair Display', serif;
   margin: 2rem 0;
   position: relative;
+}
+
+body.dark-mode .learning-hero h1{
+  color: #A3C28B;
 }
 
 .learning-hero h1::after {
@@ -221,7 +300,6 @@ body.dark-mode header .dark-toggle {
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
-  background: #d4e0c0;
 }
 
 .category-card.active {
@@ -243,6 +321,30 @@ body.dark-mode header .dark-toggle {
   text-decoration: none; 
   color: inherit;        
   display: block;        
+}
+
+
+.up a {
+background: linear-gradient(135deg, #7abf7a, #5fa95f, #459345);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;  color: black;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.up a:hover {
+  transform: translateY(-10%);
+  transition: 0.2s;
 }
 
 
@@ -317,7 +419,7 @@ body.dark-mode .search-box input:focus {
 }
 
 body.dark-mode .icon {
- color: #A3C28B;
+ color: #f0c933;
 }
 body.dark-mode footer {
   background: #000;
@@ -325,78 +427,49 @@ body.dark-mode footer {
 }
 
 body.dark-mode .categories h3{
-  color: #A3C28B;
+  color: #fdfdfd;
 }
 
+
 /* =========================
-   RESPONSIVE DESIGN
+ MOBILE 
 ========================= */
-/* =========================
-   BIEC MOBILE – STELLAR STYLE
-========================= */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
-  /* ===== TOP HEADER ===== */
-  header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px;
-    padding: 10px 12px;
-  }
-
-  header .social-icons {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center;
-    gap: 8px;
-  }
-
-  header .fa-brands {
-    font-size: 18px;
-    padding: 6px;
-  }
-
-  header .dark-toggle {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-  }
-
-  /* ===== NAV BAR (STACKED LIKE STELLAR) ===== */
   .header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px;
-    padding: 10px 12px;
+    flex-direction: column;    
+    align-items: center;       
+    gap: 5px;                 
+    padding: 8px 5%;          
   }
 
   .nav-left,
   .nav-right {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
+    flex-wrap: wrap;           
+    justify-content: center;
+    gap: 8px;                  
   }
 
   .header a {
-    font-size: 12px;          
-    letter-spacing: 0.4px;
-    padding: 6px 0;
-    width: 100%;
-    text-align: center;
+    font-size: 12px;    
+    padding: 5px 8px;
   }
 
+  header .fa-brands {
+    font-size: 20px;         
+    padding: 5px;
+  }
+  
   /* ===== HERO TEXT ===== */
   .learning-hero h1 {
-    font-size: 22px;
-    margin: 1.4rem 0;
+    font-size: 2rem;      
+    line-height: 1.2;
+    margin: 1.5rem 0;
+    padding-top: 10%;
   }
 
   .learning-hero p {
-    font-size: 13px;
+    font-size: 0.9rem;
     line-height: 1.6;
   }
 
@@ -404,6 +477,7 @@ body.dark-mode .categories h3{
   .search-box {
     width: 90%;
     margin: 24px auto;
+    padding-bottom: 10px;
   }
 
   .search-box input {
@@ -413,23 +487,43 @@ body.dark-mode .categories h3{
 
   /* ===== CATEGORY CARDS ===== */
   .categories {
-    padding: 30px 15px;
-    gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 30px 15px;
+  justify-items: center;
   }
 
-  .category-card {
-    padding: 18px;
-    height: auto;
-  }
+
+.category-card {
+  width: 100%;
+  max-width: 160px;
+  padding: 18px 14px;
+}
 
   .category-card h3 {
-    font-size: 14px;
+  font-size: 1rem;
+  }
+
+  .categories h3{
+      font-size: 1.1rem;
   }
 
   .icon {
-    font-size: 30px;
+  font-size: 22px;
     margin-bottom: 10px;
   }
+
+ .category-card p{
+  font-size: 13px;
+ }
+
+
+.categories p {
+  font-size: 15px;
+  padding-top: 10px;
+}
+
 
   /* ===== FOOTER ===== */
   footer {
