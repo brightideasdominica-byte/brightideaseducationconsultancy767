@@ -729,24 +729,32 @@ body.dark-mode footer {
     margin-top: 8px;
 }
 
-.card i {
-  font-size: 22px;
-}
+ .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-items: center;
+    margin-top: 18px;
+  }
 
-.card h3 {
-  font-size: 1rem;
-}
-
-.card p {
-  font-size: 13px;
-}
-
- .card {
+  .card {
     width: 100%;
-    max-width: 200px;
+    max-width: 160px; 
     padding: 16px;
   }
 
+  .card i {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
 
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
 
 }
+
