@@ -468,21 +468,6 @@ body.dark-mode .about-me-button {
   color: #121212;
 }
 
-body.dark-mode .about-me-button::before {
-   content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;       
-  height: 200%;      
-  transform: translate(-50%, -50%) scale(1);
-  border-radius: 50%;
-  filter: blur(25px);
-  opacity: 0.8;
-  z-index: -1;
-  pointer-events: none;
-}
-
 body.dark-mode footer {
   background-color: #000;
   color: #7c9758;
@@ -577,3 +562,4 @@ body.dark-mode footer {
   50% { box-shadow: 0 0 18px rgba(247,207,5,0.9); }
   100% { box-shadow: 0 0 8px rgba(247,207,5,0.5); }
 }
+
