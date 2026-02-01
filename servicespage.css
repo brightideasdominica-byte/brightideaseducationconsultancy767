@@ -739,7 +739,7 @@ body.dark-mode footer {
 
   .card {
     width: 100%;
-    max-width: 190px; 
+    max-width: 200px; 
     padding: 18px;
   }
 
@@ -757,5 +757,6 @@ body.dark-mode footer {
   }
 
 }
+
 
 
