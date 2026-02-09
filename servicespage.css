@@ -732,7 +732,7 @@ body.dark-mode footer {
  .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 5px;
     justify-items: center;
     margin-top: 18px;
   }
@@ -755,18 +755,9 @@ body.dark-mode footer {
     font-size: 13px;
   }
 
-  .info-cards {
-    gap: 10px;
-    padding: 18px;
-  }
-
-  .info-card {
-    padding: 18px;
-  }
 
 }
 
-}
 
 
 
