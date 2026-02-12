@@ -728,35 +728,33 @@ body.dark-mode footer {
     height: 3px;
     margin-top: 8px;
 }
-
- .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    justify-items: center;
-    margin-top: 18px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 200px; 
-    padding: 18px;
-  }
-
-  .card i {
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
-
-  .card h3 {
-    font-size: 1rem;
-  }
-  .card p {
-    font-size: 13px;
-  }
-
-
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 30px 15px;
+  justify-items: center;
 }
+
+.card {
+  width: 100%;
+  padding: 20px;
+}
+
+.card i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+}
+
 
 
 
